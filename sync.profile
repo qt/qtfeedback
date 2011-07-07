@@ -12,16 +12,16 @@
 %modulepris = (
     "QtFeedback" => "$basedir/modules/qt_feedback.pri",
 );
-# Modules and programs, and their dependencies.
+# Module dependencies.
+# Every module that is required to build this module should have one entry.
 # Each of the module version specifiers can take one of the following values:
 #   - A specific Git revision.
-#   - "LATEST_REVISION", to always test against the latest revision.
-#   - "LATEST_RELEASE", to always test against the latest public release.
-#   - "THIS_REPOSITORY", to indicate that the module is in this repository.
+#   - any git symbolic ref resolvable from the module's repository (e.g. "refs/heads/master" to track master branch)
+#
 %dependencies = (
-    "QtFeedback" => {
-        "QtCore" => "LATEST_RELEASE",
-        "QtDeclarative" => "LATEST_RELEASE",
-        "QtGui" => "LATEST_RELEASE",
-    },
+    "qtbase" => "refs/heads/master",
+    "qtscript" => "refs/heads/master",
+    "qtsvg" => "refs/heads/master",
+    "qtxmlpatterns" => "refs/heads/master",
+    "qtdeclarative" => "refs/heads/master",
 );

@@ -56,13 +56,16 @@ class QDeclarativeFeedbackPlugin : public QDeclarativeExtensionPlugin
 public:
     virtual void registerTypes(const char *uri)
     {
-        Q_ASSERT(QLatin1String(uri) == QLatin1String("QtMobility.feedback"));
-        qmlRegisterUncreatableType<QDeclarativeFeedbackEffect>("QtMobility.feedback", 1, 1, "Feedback", "this is the feedback namespace");
-        qmlRegisterUncreatableType<QDeclarativeFeedbackEffect>("QtMobility.feedback", 1, 1, "FeedbackEffect", "this is the base feedback effect class");
-        qmlRegisterType<QDeclarativeFeedbackActuator>("QtMobility.feedback", 1, 1, "Actuator");
-        qmlRegisterType<QDeclarativeFileEffect>("QtMobility.feedback", 1, 1, "FileEffect");
-        qmlRegisterType<QDeclarativeHapticsEffect>("QtMobility.feedback", 1, 1, "HapticsEffect");
-        qmlRegisterType<QDeclarativeThemeEffect>("QtMobility.feedback", 1, 1, "ThemeEffect");
+        Q_ASSERT(QLatin1String(uri) == QLatin1String("Qt.feedback"));
+
+        int major = 5;
+        int minor = 0;
+        qmlRegisterUncreatableType<QDeclarativeFeedbackEffect>(uri, major, minor, "Feedback", "this is the feedback namespace");
+        qmlRegisterUncreatableType<QDeclarativeFeedbackEffect>(uri, major, minor, "FeedbackEffect", "this is the base feedback effect class");
+        qmlRegisterType<QDeclarativeFeedbackActuator>(uri, major, minor, "Actuator");
+        qmlRegisterType<QDeclarativeFileEffect>(uri, major, minor, "FileEffect");
+        qmlRegisterType<QDeclarativeHapticsEffect>(uri, major, minor, "HapticsEffect");
+        qmlRegisterType<QDeclarativeThemeEffect>(uri, major, minor, "ThemeEffect");
     }
 };
 

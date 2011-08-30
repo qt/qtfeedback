@@ -38,24 +38,25 @@
 ** $QT_END_LICENSE$
 **
 ****************************************************************************/
-#ifndef QFEEDBACK_SYMBIAN_H
-#define QFEEDBACK_SYMBIA_H
 
-#include <qmobilityglobal.h>
+#ifndef QFEEDBACK_MMK_H
+#define QFEEDBACK_MMK_H
+
 
 #include <qfeedbackplugininterfaces.h>
 
-#include "../../../src/multimedia/effects/qsoundeffect_p.h"
+#include <private/qsoundeffect_p.h>
 
 QT_BEGIN_HEADER
-QTM_USE_NAMESPACE
+QT_BEGIN_NAMESPACE
 
 class QFeedbackMediaObject;
 
 class QFeedbackMMK : public QObject, public QFeedbackFileInterface
 {
     Q_OBJECT
-    Q_INTERFACES(QTM_NAMESPACE::QFeedbackFileInterface)
+    Q_INTERFACES(QFeedbackFileInterface)
+
 public:
     QFeedbackMMK();
     virtual ~QFeedbackMMK();
@@ -81,6 +82,7 @@ private:
     QHash<const QSoundEffect*, QFeedbackFileEffect*> mEffectMap;
 };
 
+QT_END_NAMESPACE
 QT_END_HEADER
 
-#endif
+#endif // QFEEDBACK_MMK_H

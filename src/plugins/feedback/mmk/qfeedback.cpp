@@ -46,6 +46,8 @@
 #include <QDebug>
 #include "qfeedback.h"
 
+QT_BEGIN_NAMESPACE
+
 Q_EXPORT_PLUGIN2(feedback_mmk, QFeedbackMMK)
 
 QFeedbackMMK::QFeedbackMMK() : QObject(qApp)
@@ -231,3 +233,5 @@ void QFeedbackMMK::soundEffectPlayingChanged()
         }
     }
 }
+
+QT_END_NAMESPACE

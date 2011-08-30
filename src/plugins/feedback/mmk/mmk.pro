@@ -1,7 +1,7 @@
 load(qt_module)
 
 TARGET = qtfeedback_mmk
-QT = core feedback multimediakit
+QT = core feedback multimediakit multimediakit-private
 
 load(qt_plugin)
 

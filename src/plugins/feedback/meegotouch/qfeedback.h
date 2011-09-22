@@ -42,15 +42,13 @@
 #define QFEEDBACK_MEEGOTOUCH_H
 
 #include <QObject>
-#include <qmobilityglobal.h>
 #include <qfeedbackplugininterfaces.h>
 
 QT_BEGIN_HEADER
-QTM_USE_NAMESPACE
 
 class QFeedbackMeegoTouch : public QObject, public QFeedbackThemeInterface {
     Q_OBJECT
-    Q_INTERFACES(QTM_NAMESPACE::QFeedbackThemeInterface)
+    Q_INTERFACES(QFeedbackThemeInterface)
 public:
     QFeedbackMeegoTouch(QObject *parent = 0);
 

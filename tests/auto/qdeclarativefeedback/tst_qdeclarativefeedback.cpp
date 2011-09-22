@@ -50,8 +50,6 @@
 #define SRCDIR "."
 #endif
 
-QTM_USE_NAMESPACE
-
 #ifndef QTRY_COMPARE
 #define QTRY_COMPARE(__expr, __expected) \
     do { \

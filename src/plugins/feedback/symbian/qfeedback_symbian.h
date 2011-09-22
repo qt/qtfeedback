@@ -51,7 +51,6 @@
 #include <QtCore/QTime>
 #endif
 
-#include <qmobilityglobal.h>
 #include <qfeedbackplugininterfaces.h>
 #include <e32base.h>
 
@@ -72,7 +71,6 @@ class MTouchFeedback;
 #endif //USE_CHWRMHAPTICS_PLZ
 
 QT_BEGIN_HEADER
-QTM_USE_NAMESPACE
 
 // We have theme effects on 5.0 onwards
 // and file effects if CHWRMHaptics is found (s^3 onwards?)
@@ -90,12 +88,12 @@ class QFeedbackSymbian : public QObject, public QFeedbackHapticsInterface
 #endif
 {
     Q_OBJECT
-    Q_INTERFACES(QTM_NAMESPACE::QFeedbackHapticsInterface)
+    Q_INTERFACES(QFeedbackHapticsInterface)
 #ifdef HAS_THEME_EFFECTS
-    Q_INTERFACES(QTM_NAMESPACE::QFeedbackThemeInterface)
+    Q_INTERFACES(QFeedbackThemeInterface)
 #endif
 #ifdef HAS_FILE_EFFECTS
-    Q_INTERFACES(QTM_NAMESPACE::QFeedbackFileInterface)
+    Q_INTERFACES(QFeedbackFileInterface)
 #endif
 public:
     QFeedbackSymbian();

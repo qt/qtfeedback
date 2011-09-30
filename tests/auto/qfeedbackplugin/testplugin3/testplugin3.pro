@@ -1,6 +1,6 @@
 load(qt_module)
 
-TARGET = qtfeedback_immersion
+TARGET = qtfeedback_testplugin3
 QT = core feedback
 
 load(qt_plugin)

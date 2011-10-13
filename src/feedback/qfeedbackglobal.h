@@ -39,19 +39,8 @@
 **
 ****************************************************************************/
 
-//
-//  W A R N I N G
-//  -------------
-//
-// This file is not part of the Qt API.  It exists purely as an
-// implementation detail.  This header file may change from version to
-// version without notice, or even be removed.
-//
-// We mean it.
-//
-
-#ifndef QFEEDBACK_P_H
-#define QFEEDBACK_P_H
+#ifndef QTFEEDBACK_H
+#define QTFEEDBACK_H
 
 #include <QtCore/qglobal.h>
 
@@ -81,5 +70,5 @@
 #  endif
 #endif
 
-#endif // QFEEDBACK_P_H
+#endif // QTFEEDBACK_H
 

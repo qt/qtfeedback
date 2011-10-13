@@ -12,7 +12,8 @@ DEFINES += QT_BUILD_FEEDBACK_LIB QT_MAKEDLL
 
 load(qt_module_config)
 
-PUBLIC_HEADERS += qfeedbackactuator.h \
+PUBLIC_HEADERS += qfeedbackglobal.h \
+                  qfeedbackactuator.h \
                   qfeedbackeffect.h \
                   qfeedbackplugininterfaces.h
 

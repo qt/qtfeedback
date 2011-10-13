@@ -42,7 +42,7 @@
 #ifndef QFEEDBACKACTUATOR_H
 #define QFEEDBACKACTUATOR_H
 
-#include "qfeedback_p.h"
+#include "qfeedbackglobal.h"
 #include <QtCore/QObject>
 
 QT_BEGIN_HEADER

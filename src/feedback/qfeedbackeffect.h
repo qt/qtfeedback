@@ -42,7 +42,7 @@
 #ifndef QFEEDBACKEFFECT_H
 #define QFEEDBACKEFFECT_H
 
-#include "qfeedback_p.h"
+#include "qfeedbackglobal.h"
 
 #include <QtCore/QObject>
 #include <QtCore/QStringList>

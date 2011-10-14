@@ -259,10 +259,8 @@ public:
     {
         QStringList pluginPaths = mobilityPlugins(QLatin1String("feedback"));
         // Testing hook to force "no plugin mode"
-#ifdef QT_BUILD_UNITTESTS
         if (qApp->property("QFEEDBACK_TEST_NO_PLUGINS").isValid())
             pluginPaths.clear();
-#endif
         foreach (const QString& pluginPath, pluginPaths) {
             QPluginLoader loader(pluginPath);
 

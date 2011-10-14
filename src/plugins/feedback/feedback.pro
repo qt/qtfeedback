@@ -12,4 +12,4 @@ contains(meegotouchfeedback_enabled, yes) {
 
 symbian:SUBDIRS += symbian
 
-contains(QT_CONFIG, multimediakit): SUBDIRS += mmk
+contains(QT_CONFIG, multimedia): SUBDIRS += mmk

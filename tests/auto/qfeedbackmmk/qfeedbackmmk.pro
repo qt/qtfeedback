@@ -16,4 +16,5 @@ wince*|symbian {
     DEFINES += SRCDIR=\\\"$$PWD/\\\"
 }
 
+mac:qpa:CONFIG += insignificant_test    # quicktime qtmultimedia backend is disabled for now
 maemo*:CONFIG += insignificant_test

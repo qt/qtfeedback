@@ -45,7 +45,7 @@
 
 #include <qfeedbackplugininterfaces.h>
 
-#include <private/qsoundeffect_p.h>
+#include <qsoundeffect.h>
 
 QT_BEGIN_HEADER
 QT_BEGIN_NAMESPACE

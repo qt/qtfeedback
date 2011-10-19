@@ -238,7 +238,7 @@ void tst_QFeedbackHapticsEffect::startStop()
 {
     qRegisterMetaType<QFeedbackEffect::ErrorType>("QFeedbackEffect::ErrorType");
     if (QFeedbackActuator::actuators().isEmpty())
-        QSKIP("this test requires to have actuators", SkipAll);
+        QSKIP("this test requires to have actuators");
 
     QList<QFeedbackActuator*> actuators = QFeedbackActuator::actuators();
 
@@ -322,7 +322,7 @@ void tst_QFeedbackHapticsEffect::themeSupport()
     const bool supportsTheme = QFeedbackEffect::supportsThemeEffect();
 
     if (!supportsTheme)
-        QSKIP("No theme support", SkipAll);
+        QSKIP("No theme support");
     int numberOfSupportedThemeEffects = 0;
     for (int i = 0; i < QFeedbackEffect::NumberOfThemeEffects; ++i) {
         if (QFeedbackEffect::playThemeEffect(QFeedbackEffect::ThemeEffect(i)))

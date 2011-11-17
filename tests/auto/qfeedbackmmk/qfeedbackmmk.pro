@@ -16,4 +16,4 @@ wince*|symbian {
     DEFINES += SRCDIR=\\\"$$PWD/\\\"
 }
 
-maemo*:CONFIG += insignificant_test
+linux-*:CONFIG += insignificant_test    # QTBUG-22779, segfaults

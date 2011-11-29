@@ -1,7 +1,5 @@
 include(../auto.pri)
 
-QMAKE_LIBS += -Wl,-rpath,$${QT.feedback.libs}
-
 QT += declarative feedback network script
 
 SOURCES += tst_qdeclarativefeedback.cpp

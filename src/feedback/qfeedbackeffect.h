@@ -58,7 +58,7 @@ class QFeedbackHapticsEffectPrivate;
 class Q_FEEDBACK_EXPORT QFeedbackEffect : public QObject
 {
     Q_OBJECT
-    Q_ENUMS(ThemeEffect)
+    Q_ENUMS(Effect)
     Q_ENUMS(Duration)
     Q_ENUMS(State)
     Q_ENUMS(ErrorType)
@@ -68,17 +68,11 @@ class Q_FEEDBACK_EXPORT QFeedbackEffect : public QObject
 
 public:
     // Make sure these are kept up to date with the declarative version
-    enum ThemeEffect {
-        ThemeBasic, ThemeSensitive, ThemeBasicButton, ThemeSensitiveButton,
-        ThemeBasicKeypad, ThemeSensitiveKeypad, ThemeBasicSlider, ThemeSensitiveSlider,
-        ThemeBasicItem, ThemeSensitiveItem, ThemeItemScroll, ThemeItemPick, ThemeItemDrop,
-        ThemeItemMoveOver, ThemeBounceEffect, ThemeCheckBox, ThemeMultipleCheckBox, ThemeEditor,
-        ThemeTextSelection, ThemeBlankSelection, ThemeLineSelection, ThemeEmptyLineSelection,
-        ThemePopUp, ThemePopupOpen, ThemePopupClose, ThemeFlick, ThemeStopFlick,
-        ThemeMultiPointTouchActivate, ThemeRotateStep, ThemeLongPress, ThemePositiveTacticon,
-        ThemeNeutralTacticon, ThemeNegativeTacticon,
-        NumberOfThemeEffects,
-        ThemeUser = 65535
+    enum Effect {
+        Undefined = -1, Press, Release, PressWeak, ReleaseWeak, PressStrong, ReleaseStrong, PressAndHold,
+        DragStart, DragDropInZone, DragDropOutOfZone, DragCrossBoundary, Popup, PopupClose, Move,
+        NumberOfEffects,
+        UserEffect = 65535
     };
 
     enum Duration {
@@ -104,7 +98,7 @@ public:
 
     //for themes
     static bool supportsThemeEffect();
-    static bool playThemeEffect(ThemeEffect effect);
+    static bool playThemeEffect(Effect effect);
 
 public Q_SLOTS:
     void start();

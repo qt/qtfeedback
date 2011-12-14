@@ -65,55 +65,37 @@ class QDeclarativeThemeEffect : public QObject
     Q_OBJECT
 
     Q_PROPERTY(bool supported READ effectSupported)
-    Q_PROPERTY(ThemeEffect effect READ effect WRITE setEffect NOTIFY effectChanged)
+    Q_PROPERTY(Effect effect READ effect WRITE setEffect NOTIFY effectChanged)
 
     Q_CLASSINFO("DefaultMethod", "play()")
 
-    Q_ENUMS(ThemeEffect)
+    Q_ENUMS(Effect)
 
 public:
-    enum ThemeEffect {
-        Basic = QFeedbackEffect::ThemeBasic,
-        Sensitive = QFeedbackEffect::ThemeSensitive,
-        BasicButton = QFeedbackEffect::ThemeBasicButton,
-        SensitiveButton = QFeedbackEffect::ThemeSensitiveButton,
-        BasicKeypad = QFeedbackEffect::ThemeBasicKeypad,
-        SensitiveKeypad = QFeedbackEffect::ThemeSensitiveKeypad,
-        BasicSlider = QFeedbackEffect::ThemeBasicSlider,
-        SensitiveSlider = QFeedbackEffect::ThemeSensitiveSlider,
-        BasicItem = QFeedbackEffect::ThemeBasicItem,
-        SensitiveItem = QFeedbackEffect::ThemeSensitiveItem,
-        ItemScroll = QFeedbackEffect::ThemeItemScroll,
-        ItemPick = QFeedbackEffect::ThemeItemPick,
-        ItemDrop = QFeedbackEffect::ThemeItemDrop,
-        ItemMoveOver = QFeedbackEffect::ThemeItemMoveOver,
-        BounceEffect = QFeedbackEffect::ThemeBounceEffect,
-        CheckBox = QFeedbackEffect::ThemeCheckBox,
-        MultipleCheckBox = QFeedbackEffect::ThemeMultipleCheckBox,
-        Editor = QFeedbackEffect::ThemeEditor,
-        TextSelection = QFeedbackEffect::ThemeTextSelection,
-        BlankSelection = QFeedbackEffect::ThemeBlankSelection,
-        LineSelection = QFeedbackEffect::ThemeLineSelection,
-        EmptyLineSelection = QFeedbackEffect::ThemeEmptyLineSelection,
-        PopUp = QFeedbackEffect::ThemePopUp,
-        PopupOpen = QFeedbackEffect::ThemePopupOpen,
-        PopupClose = QFeedbackEffect::ThemePopupClose,
-        Flick = QFeedbackEffect::ThemeFlick,
-        StopFlick = QFeedbackEffect::ThemeStopFlick,
-        MultiPointTouchActivate = QFeedbackEffect::ThemeMultiPointTouchActivate,
-        RotateStep = QFeedbackEffect::ThemeRotateStep,
-        LongPress = QFeedbackEffect::ThemeLongPress,
-        PositiveTacticon = QFeedbackEffect::ThemePositiveTacticon,
-        NeutralTacticon = QFeedbackEffect::ThemeNeutralTacticon,
-        NegativeTacticon = QFeedbackEffect::ThemeNegativeTacticon,
-        NumberOfThemeEffects = QFeedbackEffect::NumberOfThemeEffects,
-        ThemeUser = QFeedbackEffect::ThemeUser
+    enum Effect {
+        Undefined = QFeedbackEffect::Undefined,
+        Press = QFeedbackEffect::Press,
+        Release = QFeedbackEffect::Release,
+        PressWeak = QFeedbackEffect::PressWeak,
+        ReleaseWeak = QFeedbackEffect::ReleaseWeak,
+        PressStrong = QFeedbackEffect::PressStrong,
+        ReleaseStrong = QFeedbackEffect::ReleaseStrong,
+        PressAndHold = QFeedbackEffect::PressAndHold,
+        DragStart = QFeedbackEffect::DragStart,
+        DragDropInZone = QFeedbackEffect::DragDropInZone,
+        DragDropOutOfZone = QFeedbackEffect::DragDropOutOfZone,
+        DragCrossBoundary = QFeedbackEffect::DragCrossBoundary,
+        Popup = QFeedbackEffect::Popup,
+        PopupClose = QFeedbackEffect::PopupClose,
+        Move = QFeedbackEffect::Move,
+        NumberOfEffects = QFeedbackEffect::NumberOfEffects,
+        UserEffect = QFeedbackEffect::UserEffect
     };
 
     QDeclarativeThemeEffect(QObject *parent = 0);
     bool effectSupported();
-    void setEffect(ThemeEffect effect);
-    ThemeEffect effect() const;
+    void setEffect(Effect effect);
+    Effect effect() const;
 
 public slots:
     void play();
@@ -122,7 +104,7 @@ signals:
     void effectChanged();
 
 public:
-    ThemeEffect m_effect;
+    Effect m_effect;
 };
 
 QML_DECLARE_TYPE(QDeclarativeThemeEffect)

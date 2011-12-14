@@ -434,7 +434,7 @@ QFeedbackActuator* QFeedbackHapticsInterface::createFeedbackActuator(QObject* pa
 */
 
 /*!
-    \fn QFeedbackThemeInterface::play(QFeedbackEffect::ThemeEffect effect)
+    \fn QFeedbackThemeInterface::play(QFeedbackEffect::Effect effect)
 
     Plays the theme effect \a effect. Returns false in case of an error.
 */

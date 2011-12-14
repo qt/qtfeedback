@@ -63,7 +63,7 @@ public:
     virtual ~QFeedbackTestPlugin();
 
     virtual PluginPriority pluginPriority() {return QFeedbackInterface::PluginLowPriority;}
-    virtual bool play(QFeedbackEffect::ThemeEffect) {return false;}
+    virtual bool play(QFeedbackEffect::Effect) {return false;}
 };
 
 QT_END_HEADER

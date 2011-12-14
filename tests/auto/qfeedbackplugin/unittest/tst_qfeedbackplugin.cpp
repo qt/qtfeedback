@@ -94,8 +94,8 @@ void tst_QFeedbackPlugin::cleanup()
 void tst_QFeedbackPlugin::testThemeEffect()
 {
     QVERIFY(QFeedbackEffect::supportsThemeEffect());
-    QVERIFY(QFeedbackEffect::playThemeEffect(QFeedbackEffect::ThemeBasic));
-    QVERIFY(!QFeedbackEffect::playThemeEffect(QFeedbackEffect::ThemeBasicButton));
+    QVERIFY(QFeedbackEffect::playThemeEffect(QFeedbackEffect::Press));
+    QVERIFY(!QFeedbackEffect::playThemeEffect(QFeedbackEffect::Release));
 }
 
 void tst_QFeedbackPlugin::testFileEffect()

@@ -55,7 +55,7 @@
 */
 QDeclarativeThemeEffect::QDeclarativeThemeEffect(QObject *parent)
     : QObject(parent),
-    m_effect(QDeclarativeThemeEffect::Basic)
+    m_effect(QDeclarativeThemeEffect::Press)
 {
 }
 
@@ -73,40 +73,20 @@ bool QDeclarativeThemeEffect::effectSupported() {
 
     This property holds the specific themed effect type to play.  It is one of:
 
-  \list
-    \o ThemeEffect.Basic - Generic feedback.
-    \o ThemeEffect.Sensitive - Generic sensitive feedback.
-    \o ThemeEffect.BasicButton - Feedback for interacting with a button (e.g. pressing).
-    \o ThemeEffect.SensitiveButton - Sensitive feedback for interacting with a button (e.g. auto repeat).
-    \o ThemeEffect.BasicKeypad - Feedback for interacting with a keypad button.
-    \o ThemeEffect.SensitiveKeypad - Sensitive feedback for interacting with a keypad button.
-    \o ThemeEffect.BasicSlider - Feedback for moving a slider.
-    \o ThemeEffect.SensitiveSlider - Sensitive feedback for moving a slider.
-    \o ThemeEffect.BasicItem - Feedback when interacting with a list or grid item.
-    \o ThemeEffect.SensitiveItem - Sensitive feedback when interacting with a list or grid item.
-    \o ThemeEffect.ItemScroll - Feedback when scrolling a list or grid item view.
-    \o ThemeEffect.ItemPick - Feedback when selecting an item to move in a list or grid view.
-    \o ThemeEffect.ItemDrop - Feedback when dropping an item in a list or grid view.
-    \o ThemeEffect.ItemMoveOver - Feedback when moving an item in a list or grid view.
-    \o ThemeEffect.BounceEffect - Feedback for a bounce effect.
-    \o ThemeEffect.CheckBox - Feedback for selecting a checkbox.
-    \o ThemeEffect.MultipleCheckBox - Feedback for selecting checkboxes of multiple items.
-    \o ThemeEffect.Editor - Feedback for interacting with an editor.
-    \o ThemeEffect.TextSelection - Feedback for selecting text.
-    \o ThemeEffect.BlankSelection - Feedback for a blank selection.
-    \o ThemeEffect.LineSelection - Feedback for selecting a line.
-    \o ThemeEffect.EmptyLineSelection - Feedback for selecting an empty line.
-    \o ThemeEffect.PopUp - Generic feedback for interacting with a popup.
-    \o ThemeEffect.PopupOpen - Generic feedback when a popup opens.
-    \o ThemeEffect.PopupClose - Generic feedback when a popup closes.
-    \o ThemeEffect.Flick - Generic feedback when starting a flick gesture.
-    \o ThemeEffect.StopFlick - Generic feedback when stopping a flick.
-    \o ThemeEffect.MultiPointTouchActivate - Generic feedback when a touch gesture with more than one point is started.
-    \o ThemeEffect.RotateStep - Feedback when rotating using a gesture.
-    \o ThemeEffect.LongPress - Feedback for a long press (or tap and hold) gesture.
-    \o ThemeEffect.PositiveTacticon - Generic feedback for notification of a successful operation.
-    \o ThemeEffect.NeutralTacticon - Generic feedback for notification.
-    \o ThemeEffect.NegativeTacticon - Generic feedback for notification of a failed operation.
+    \o ThemeEffect.Press - Feedback for when the screen is pressed.
+    \o ThemeEffect.Release - Feedback for touch release.
+    \o ThemeEffect.PressWeak - A weak feedback for press.
+    \o ThemeEffect.ReleaseWeak - A weak feedback for release.
+    \o ThemeEffect.PressStrong - A strong feedback for press.
+    \o ThemeEffect.ReleaseStrong - A strong feedback for release.
+    \o ThemeEffect.PressAndHold - Feedback for long press.
+    \o ThemeEffect.DragStart - Feedback for when dragging starts.
+    \o ThemeEffect.DragDropInZone - Feedback for when dragging ends and touch is released inside a drop zone.
+    \o ThemeEffect.DragDropOutOfZone - Feedback for when dragging ends and touch is released outside a drop zone.
+    \o ThemeEffect.DragCrossBoundary - Feedback for when crossing a boundary while dragging.
+    \o ThemeEffect.Popup - Feedback for when a popup item is shown.
+    \o ThemeEffect.PopupClose - Feedback for when a popup item is closed.
+    \o ThemeEffect.Move - Feedback for dragging on screen.
   \endlist
 
   \sa QFeedbackEffect::ThemeEffect

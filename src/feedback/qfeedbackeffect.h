@@ -69,14 +69,8 @@ class Q_FEEDBACK_EXPORT QFeedbackEffect : public QObject
 public:
     // Make sure these are kept up to date with the declarative version
     enum ThemeEffect {
-        ThemeBasic, ThemeSensitive, ThemeBasicButton, ThemeSensitiveButton,
-        ThemeBasicKeypad, ThemeSensitiveKeypad, ThemeBasicSlider, ThemeSensitiveSlider,
-        ThemeBasicItem, ThemeSensitiveItem, ThemeItemScroll, ThemeItemPick, ThemeItemDrop,
-        ThemeItemMoveOver, ThemeBounceEffect, ThemeCheckBox, ThemeMultipleCheckBox, ThemeEditor,
-        ThemeTextSelection, ThemeBlankSelection, ThemeLineSelection, ThemeEmptyLineSelection,
-        ThemePopUp, ThemePopupOpen, ThemePopupClose, ThemeFlick, ThemeStopFlick,
-        ThemeMultiPointTouchActivate, ThemeRotateStep, ThemeLongPress, ThemePositiveTacticon,
-        ThemeNeutralTacticon, ThemeNegativeTacticon,
+        Press, Release, PressWeak, ReleaseWeak, PressStrong, ReleaseStrong, PressAndHold, DragStart,
+        DragDropInZone, DragDropOutOfZone, DragCrossBoundary, Popup, PopupClose, Move,
         NumberOfThemeEffects,
         ThemeUser = 65535
     };

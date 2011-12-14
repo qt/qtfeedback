@@ -158,39 +158,20 @@ QT_BEGIN_NAMESPACE
 
     Not all platforms and devices have distinct effects for each type.
 
-    \value ThemeBasic Generic feedback.
-    \value ThemeSensitive Generic sensitive feedback.
-    \value ThemeBasicButton Feedback for interacting with a button (e.g. pressing).
-    \value ThemeSensitiveButton Sensitive feedback for interacting with a button (e.g. auto repeat).
-    \value ThemeBasicKeypad Feedback for interacting with a keypad button.
-    \value ThemeSensitiveKeypad Sensitive feedback for interacting with a keypad button.
-    \value ThemeBasicSlider Feedback for moving a slider.
-    \value ThemeSensitiveSlider Sensitive feedback for moving a slider.
-    \value ThemeBasicItem Feedback when interacting with a list or grid item.
-    \value ThemeSensitiveItem Sensitive feedback when interacting with a list or grid item.
-    \value ThemeItemScroll Feedback when scrolling a list or grid item view.
-    \value ThemeItemPick Feedback when selecting an item to move in a list or grid view.
-    \value ThemeItemDrop Feedback when dropping an item in a list or grid view.
-    \value ThemeItemMoveOver Feedback when moving an item in a list or grid view.
-    \value ThemeBounceEffect Feedback for a bounce effect.
-    \value ThemeCheckBox Feedback for selecting a checkbox.
-    \value ThemeMultipleCheckBox Feedback for selecting checkboxes of multiple items.
-    \value ThemeEditor Feedback for interacting with an editor.
-    \value ThemeTextSelection Feedback for selecting text.
-    \value ThemeBlankSelection Feedback for a blank selection.
-    \value ThemeLineSelection Feedback for selecting a line.
-    \value ThemeEmptyLineSelection Feedback for selecting an empty line.
-    \value ThemePopUp Generic feedback for interacting with a popup.
-    \value ThemePopupOpen Generic feedback when a popup opens.
-    \value ThemePopupClose Generic feedback when a popup closes.
-    \value ThemeFlick Generic feedback when starting a flick gesture.
-    \value ThemeStopFlick Generic feedback when stopping a flick.
-    \value ThemeMultiPointTouchActivate Generic feedback when a touch gesture with more than one point is started.
-    \value ThemeRotateStep Feedback when rotating using a gesture.
-    \value ThemeLongPress Feedback for a long press (or tap and hold) gesture.
-    \value ThemePositiveTacticon Generic feedback for notification of a successful operation.
-    \value ThemeNeutralTacticon Generic feedback for notification.
-    \value ThemeNegativeTacticon Generic feedback for notification of a failed operation.
+    \value ThemeEffect.Press - Feedback for when the screen is pressed.
+    \value ThemeEffect.Release - Feedback for touch release.
+    \value ThemeEffect.PressWeak - A weak feedback for press.
+    \value ThemeEffect.ReleaseWeak - A weak feedback for release.
+    \value ThemeEffect.PressStrong - A strong feedback for press.
+    \value ThemeEffect.ReleaseStrong - A strong feedback for release.
+    \value ThemeEffect.PressAndHold - Feedback for long press.
+    \value ThemeEffect.DragStart - Feedback for when dragging starts.
+    \value ThemeEffect.DragDropInZone - Feedback for when dragging ends and touch is released inside a drop zone.
+    \value ThemeEffect.DragDropOutOfZone - Feedback for when dragging ends and touch is released outside a drop zone.
+    \value ThemeEffect.DragCrossBoundary - Feedback for when crossing a boundary while dragging.
+    \value ThemeEffect.Popup - Feedback for when a popup item is shown.
+    \value ThemeEffect.PopupClose - Feedback for when a popup item is closed.
+    \value ThemeEffect.Move - Feedback for dragging on screen.
     \value NumberOfThemeEffects The number of built-in effects.
     \value ThemeUser The starting point for any user defined effects, where supported.
  */

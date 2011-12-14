@@ -153,7 +153,7 @@ void tst_qdeclarativefeedback::themeEffect()
 
     // Test the effect property gets assigned
     QMetaProperty p = dte->metaObject()->property(dte->metaObject()->indexOfProperty("effect"));
-    QCOMPARE(p.read(dte).value<int>(), (int)QFeedbackEffect::ThemeBasicButton);
+    QCOMPARE(p.read(dte).value<int>(), (int)QFeedbackEffect::Press);
 
     p = dte->metaObject()->property(dte->metaObject()->indexOfProperty("supported"));
     QCOMPARE(p.read(dte).value<bool>(), QFeedbackEffect::supportsThemeEffect());
@@ -168,7 +168,7 @@ void tst_qdeclarativefeedback::themeEffect()
     QVERIFY(dte != 0);
     // Effect property as a string
     p = dte->metaObject()->property(dte->metaObject()->indexOfProperty("effect"));
-    QCOMPARE(p.read(dte).value<int>(), (int)QFeedbackEffect::ThemeRotateStep);
+    QCOMPARE(p.read(dte).value<int>(), (int)QFeedbackEffect::Release);
 
     delete dte;
 

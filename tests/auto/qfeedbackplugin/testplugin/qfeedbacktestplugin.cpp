@@ -213,7 +213,7 @@ QStringList QFeedbackTestPlugin::supportedMimeTypes()
 
 bool QFeedbackTestPlugin::play(QFeedbackEffect::ThemeEffect themeEffect)
 {
-    if (themeEffect == QFeedbackEffect::ThemeBasic)
+    if (themeEffect == QFeedbackEffect::Press)
         return true;
     else {
         reportError(0, QFeedbackEffect::UnknownError);

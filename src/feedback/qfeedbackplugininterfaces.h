@@ -109,7 +109,7 @@ class QFeedbackThemeInterface : public QFeedbackInterface
 public:
     virtual ~QFeedbackThemeInterface() {}
     virtual PluginPriority pluginPriority() = 0;
-    virtual bool play(QFeedbackEffect::ThemeEffect) = 0;
+    virtual bool play(QFeedbackEffect::Effect) = 0;
     static QFeedbackThemeInterface *instance();
 };
 

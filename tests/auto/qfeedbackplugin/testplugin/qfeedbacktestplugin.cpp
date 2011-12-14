@@ -211,9 +211,9 @@ QStringList QFeedbackTestPlugin::supportedMimeTypes()
     return QStringList() << "x-test/this is a test";
 }
 
-bool QFeedbackTestPlugin::play(QFeedbackEffect::ThemeEffect themeEffect)
+bool QFeedbackTestPlugin::play(QFeedbackEffect::Effect effect)
 {
-    if (themeEffect == QFeedbackEffect::ThemeBasic)
+    if (effect == QFeedbackEffect::Press)
         return true;
     else {
         reportError(0, QFeedbackEffect::UnknownError);

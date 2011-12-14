@@ -68,39 +68,20 @@ Q_EXPORT_PLUGIN2(feedback_meegotouch, QFeedbackMeegoTouch)
 static QString convertToMeegoTouch(QFeedbackEffect::ThemeEffect effect)
 {
     switch (effect) {
-    case QFeedbackEffect::ThemeBasic:
-    case QFeedbackEffect::ThemeSensitive:
-    case QFeedbackEffect::ThemeBasicButton:
-    case QFeedbackEffect::ThemeSensitiveButton:
-    case QFeedbackEffect::ThemeBasicKeypad:
-    case QFeedbackEffect::ThemeSensitiveKeypad:
-    case QFeedbackEffect::ThemeBasicSlider:
-    case QFeedbackEffect::ThemeSensitiveSlider:
-    case QFeedbackEffect::ThemeBasicItem:
-    case QFeedbackEffect::ThemeSensitiveItem:
-    case QFeedbackEffect::ThemeItemScroll:
-    case QFeedbackEffect::ThemeItemPick:
-    case QFeedbackEffect::ThemeItemDrop:
-    case QFeedbackEffect::ThemeItemMoveOver:
-    case QFeedbackEffect::ThemeBounceEffect:
-    case QFeedbackEffect::ThemeCheckBox:
-    case QFeedbackEffect::ThemeMultipleCheckBox:
-    case QFeedbackEffect::ThemeEditor:
-    case QFeedbackEffect::ThemeTextSelection:
-    case QFeedbackEffect::ThemeBlankSelection:
-    case QFeedbackEffect::ThemeLineSelection:
-    case QFeedbackEffect::ThemeEmptyLineSelection:
-    case QFeedbackEffect::ThemePopUp:
-    case QFeedbackEffect::ThemePopupOpen:
-    case QFeedbackEffect::ThemePopupClose:
-    case QFeedbackEffect::ThemeFlick:
-    case QFeedbackEffect::ThemeStopFlick:
-    case QFeedbackEffect::ThemeMultiPointTouchActivate:
-    case QFeedbackEffect::ThemeRotateStep:
-    case QFeedbackEffect::ThemeLongPress:
-    case QFeedbackEffect::ThemePositiveTacticon:
-    case QFeedbackEffect::ThemeNeutralTacticon:
-    case QFeedbackEffect::ThemeNegativeTacticon:
+    case QFeedbackEffect::Press:
+    case QFeedbackEffect::Release:
+    case QFeedbackEffect::PressWeak:
+    case QFeedbackEffect::ReleaseWeak:
+    case QFeedbackEffect::PressStrong:
+    case QFeedbackEffect::ReleaseStrong:
+    case QFeedbackEffect::PressAndHold:
+    case QFeedbackEffect::DragStart:
+    case QFeedbackEffect::DragDropInZone:
+    case QFeedbackEffect::DragDropOutOfZone:
+    case QFeedbackEffect::DragCrossBoundary:
+    case QFeedbackEffect::Popup:
+    case QFeedbackEffect::PopupClose:
+    case QFeedbackEffect::Move:
         return MFeedback::Press;
     default:
         return QString();
@@ -113,7 +94,7 @@ QFeedbackMeegoTouch::QFeedbackMeegoTouch(QObject *parent) :
 {
 }
 
-bool QFeedbackMeegoTouch::play(QFeedbackEffect::ThemeEffect effect)
+bool QFeedbackMeegoTouch::play(QFeedbackEffect::Effect effect)
 {
     const QString &feedbackString = convertToMeegoTouch(effect);
     if (feedbackString.isEmpty())

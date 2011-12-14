@@ -113,7 +113,7 @@ public:
     virtual QFeedbackEffect::State effectState(const QFeedbackHapticsEffect *);
 
 #ifdef HAS_THEME_EFFECTS
-    virtual bool play(QFeedbackEffect::ThemeEffect);
+    virtual bool play(QFeedbackEffect::Effect);
 #endif
 
 #ifdef HAS_FILE_EFFECTS

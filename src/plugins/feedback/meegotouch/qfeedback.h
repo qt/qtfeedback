@@ -52,7 +52,7 @@ class QFeedbackMeegoTouch : public QObject, public QFeedbackThemeInterface {
 public:
     QFeedbackMeegoTouch(QObject *parent = 0);
 
-    virtual bool play(QFeedbackEffect::ThemeEffect);
+    virtual bool play(QFeedbackEffect::Effect);
     virtual QFeedbackInterface::PluginPriority pluginPriority();
 };
 

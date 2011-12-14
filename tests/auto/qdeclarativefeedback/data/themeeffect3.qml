@@ -3,5 +3,5 @@ import Qt.feedback 5.0
 
 // Test default method
 Item {
-    Component.onCompleted: ThemeEffect {effect: "ItemMoveOver"}
+    Component.onCompleted: ThemeEffect {effect: "Press"}
 }

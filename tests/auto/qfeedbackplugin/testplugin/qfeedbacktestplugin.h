@@ -86,7 +86,7 @@ public:
     virtual QStringList supportedMimeTypes();
 
     // For themes
-    virtual bool play(QFeedbackEffect::ThemeEffect);
+    virtual bool play(QFeedbackEffect::Effect);
 
 private slots:
     void timerExpired();

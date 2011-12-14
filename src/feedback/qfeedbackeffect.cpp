@@ -149,50 +149,30 @@ QT_BEGIN_NAMESPACE
 */
 
 /*!
-    \enum QFeedbackEffect::ThemeEffect
+    \enum QFeedbackEffect::Effect
 
-    This enum describes all possible theme effect types.  In general, "sensitive" versions
-    of effects are useful if it is less important that the effect is noticed, or when
-    a lot of the effects are going to be played close together.  Theme effects might
+    This enum describes all possible effect types. Effects might
     be tactile, or audio or visual.
 
     Not all platforms and devices have distinct effects for each type.
 
-    \value ThemeBasic Generic feedback.
-    \value ThemeSensitive Generic sensitive feedback.
-    \value ThemeBasicButton Feedback for interacting with a button (e.g. pressing).
-    \value ThemeSensitiveButton Sensitive feedback for interacting with a button (e.g. auto repeat).
-    \value ThemeBasicKeypad Feedback for interacting with a keypad button.
-    \value ThemeSensitiveKeypad Sensitive feedback for interacting with a keypad button.
-    \value ThemeBasicSlider Feedback for moving a slider.
-    \value ThemeSensitiveSlider Sensitive feedback for moving a slider.
-    \value ThemeBasicItem Feedback when interacting with a list or grid item.
-    \value ThemeSensitiveItem Sensitive feedback when interacting with a list or grid item.
-    \value ThemeItemScroll Feedback when scrolling a list or grid item view.
-    \value ThemeItemPick Feedback when selecting an item to move in a list or grid view.
-    \value ThemeItemDrop Feedback when dropping an item in a list or grid view.
-    \value ThemeItemMoveOver Feedback when moving an item in a list or grid view.
-    \value ThemeBounceEffect Feedback for a bounce effect.
-    \value ThemeCheckBox Feedback for selecting a checkbox.
-    \value ThemeMultipleCheckBox Feedback for selecting checkboxes of multiple items.
-    \value ThemeEditor Feedback for interacting with an editor.
-    \value ThemeTextSelection Feedback for selecting text.
-    \value ThemeBlankSelection Feedback for a blank selection.
-    \value ThemeLineSelection Feedback for selecting a line.
-    \value ThemeEmptyLineSelection Feedback for selecting an empty line.
-    \value ThemePopUp Generic feedback for interacting with a popup.
-    \value ThemePopupOpen Generic feedback when a popup opens.
-    \value ThemePopupClose Generic feedback when a popup closes.
-    \value ThemeFlick Generic feedback when starting a flick gesture.
-    \value ThemeStopFlick Generic feedback when stopping a flick.
-    \value ThemeMultiPointTouchActivate Generic feedback when a touch gesture with more than one point is started.
-    \value ThemeRotateStep Feedback when rotating using a gesture.
-    \value ThemeLongPress Feedback for a long press (or tap and hold) gesture.
-    \value ThemePositiveTacticon Generic feedback for notification of a successful operation.
-    \value ThemeNeutralTacticon Generic feedback for notification.
-    \value ThemeNegativeTacticon Generic feedback for notification of a failed operation.
-    \value NumberOfThemeEffects The number of built-in effects.
-    \value ThemeUser The starting point for any user defined effects, where supported.
+    \value Effect.Undefined - Undefined effect. No feedback is given.
+    \value Effect.Press - Feedback for when the screen is pressed.
+    \value Effect.Release - Feedback for touch release.
+    \value Effect.PressWeak - A weak feedback for press.
+    \value Effect.ReleaseWeak - A weak feedback for release.
+    \value Effect.PressStrong - A strong feedback for press.
+    \value Effect.ReleaseStrong - A strong feedback for release.
+    \value Effect.PressAndHold - Feedback for long press.
+    \value Effect.DragStart - Feedback for when dragging starts.
+    \value Effect.DragDropInZone - Feedback for when dragging ends and touch is released inside a drop zone.
+    \value Effect.DragDropOutOfZone - Feedback for when dragging ends and touch is released outside a drop zone.
+    \value Effect.DragCrossBoundary - Feedback for when crossing a boundary while dragging.
+    \value Effect.Popup - Feedback for when a popup item is shown.
+    \value Effect.PopupClose - Feedback for when a popup item is closed.
+    \value Effect.Move - Feedback for dragging on screen.
+    \value NumberOfEffects The number of built-in effects.
+    \value UserEffect The starting point for any user defined effects, where supported.
  */
 
 /*!
@@ -269,12 +249,12 @@ void QFeedbackEffect::pause()
 }
 
 /*!
-    \fn QFeedbackEffect::playThemeEffect(ThemeEffect effect)
+    \fn QFeedbackEffect::playThemeEffect(Effect effect)
 
     This function plays \a effect instantly and returns true if the
     effect could be played; otherwise, returns false.
 */
-bool QFeedbackEffect::playThemeEffect(ThemeEffect effect)
+bool QFeedbackEffect::playThemeEffect(Effect effect)
 {
     if (QFeedbackThemeInterface *iface = QFeedbackThemeInterface::instance())
         return iface->play(effect);

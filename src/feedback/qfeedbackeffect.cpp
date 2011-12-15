@@ -156,6 +156,7 @@ QT_BEGIN_NAMESPACE
 
     Not all platforms and devices have distinct effects for each type.
 
+    \value Effect.Undefined - Undefined feedback. No feedback is given.
     \value Effect.Press - Feedback for when the screen is pressed.
     \value Effect.Release - Feedback for touch release.
     \value Effect.PressWeak - A weak feedback for press.

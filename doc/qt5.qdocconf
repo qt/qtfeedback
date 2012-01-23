@@ -12,9 +12,9 @@ include(qt-defines.qdocconf)
 # Images should be placed in <rootdir>/dic/images and examples in
 # <rootdir>/examples.
 # Paths are relative to the  location of this file.
-exampledirs += ..
+exampledirs += src/snippets
 headerdirs += ..
-imagedirs += images
+imagedirs += src/images
 sourcedirs += ..
 
 # The following parameters are for creating a qhp file, the qhelpgenerator

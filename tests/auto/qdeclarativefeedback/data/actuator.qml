@@ -1,4 +1,4 @@
-import Qt.feedback 5.0
+import QtFeedback 5.0
 
 Actuator {
     enabled: false

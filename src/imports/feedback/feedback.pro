@@ -1,5 +1,5 @@
 TARGET  = declarative_feedback
-TARGETPATH = Qt/feedback
+TARGETPATH = QtFeedback
 include(qfeedbackimport.pri)
 target.path = $$[QT_INSTALL_IMPORTS]/$$TARGETPATH
 DESTDIR = $$QT.feedback.imports/$$TARGETPATH

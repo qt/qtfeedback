@@ -12,7 +12,7 @@ include(qt-defines.qdocconf)
 # Images should be placed in <rootdir>/dic/images and examples in
 # <rootdir>/examples.
 # Paths are relative to the  location of this file.
-exampledirs += src/snippets
+exampledirs += src/snippets ..
 headerdirs += ..
 imagedirs += src/images
 sourcedirs += ..

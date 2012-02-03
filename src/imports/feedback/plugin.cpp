@@ -56,7 +56,7 @@ class QDeclarativeFeedbackPlugin : public QDeclarativeExtensionPlugin
 public:
     virtual void registerTypes(const char *uri)
     {
-        Q_ASSERT(QLatin1String(uri) == QLatin1String("QtFeedback"));
+        Q_ASSERT(QLatin1String(uri) == QLatin1String("QtFeedback") || QLatin1String(uri) == QLatin1String("Qt.feedback"));
 
         int major = 5;
         int minor = 0;

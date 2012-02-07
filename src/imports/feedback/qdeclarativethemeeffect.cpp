@@ -80,13 +80,12 @@ bool QDeclarativeThemeEffect::effectSupported() {
     \o Effect.ReleaseWeak - A weak feedback for release.
     \o Effect.PressStrong - A strong feedback for press.
     \o Effect.ReleaseStrong - A strong feedback for release.
-    \o Effect.PressAndHold - Feedback for long press.
     \o Effect.DragStart - Feedback for when dragging starts.
     \o Effect.DragDropInZone - Feedback for when dragging ends and touch is released inside a drop zone.
     \o Effect.DragDropOutOfZone - Feedback for when dragging ends and touch is released outside a drop zone.
     \o Effect.DragCrossBoundary - Feedback for when crossing a boundary while dragging.
-    \o Effect.Popup - Feedback for when a popup item is shown.
-    \o Effect.PopupClose - Feedback for when a popup item is closed.
+    \o Effect.Appear - Feedback for when an item is shown.
+    \o Effect.Disappear - Feedback for when an item item is closed.
     \o Effect.Move - Feedback for dragging on screen.
   \endlist
 

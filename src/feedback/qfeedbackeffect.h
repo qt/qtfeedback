@@ -69,8 +69,8 @@ class Q_FEEDBACK_EXPORT QFeedbackEffect : public QObject
 public:
     // Make sure these are kept up to date with the declarative version
     enum Effect {
-        Undefined = -1, Press, Release, PressWeak, ReleaseWeak, PressStrong, ReleaseStrong, PressAndHold,
-        DragStart, DragDropInZone, DragDropOutOfZone, DragCrossBoundary, Popup, PopupClose, Move,
+        Undefined = -1, Press, Release, PressWeak, ReleaseWeak, PressStrong, ReleaseStrong, DragStart,
+        DragDropInZone, DragDropOutOfZone, DragCrossBoundary, Appear, Disappear, Move,
         NumberOfEffects,
         UserEffect = 65535
     };

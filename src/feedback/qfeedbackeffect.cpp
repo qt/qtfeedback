@@ -163,13 +163,12 @@ QT_BEGIN_NAMESPACE
     \value Effect.ReleaseWeak - A weak feedback for release.
     \value Effect.PressStrong - A strong feedback for press.
     \value Effect.ReleaseStrong - A strong feedback for release.
-    \value Effect.PressAndHold - Feedback for long press.
     \value Effect.DragStart - Feedback for when dragging starts.
     \value Effect.DragDropInZone - Feedback for when dragging ends and touch is released inside a drop zone.
     \value Effect.DragDropOutOfZone - Feedback for when dragging ends and touch is released outside a drop zone.
     \value Effect.DragCrossBoundary - Feedback for when crossing a boundary while dragging.
-    \value Effect.Popup - Feedback for when a popup item is shown.
-    \value Effect.PopupClose - Feedback for when a popup item is closed.
+    \value Effect.Appear - Feedback for when an item is shown.
+    \value Effect.Disappear - Feedback for when an item is closed.
     \value Effect.Move - Feedback for dragging on screen.
     \value NumberOfEffects The number of built-in effects.
     \value UserEffect The starting point for any user defined effects, where supported.

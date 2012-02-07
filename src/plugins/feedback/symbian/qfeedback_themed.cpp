@@ -70,13 +70,12 @@ static TTouchLogicalFeedback convertToSymbian(QFeedbackEffect::Effect effect)
     case QFeedbackEffect::ReleaseWeak:
     case QFeedbackEffect::PressStrong:
     case QFeedbackEffect::ReleaseStrong:
-    case QFeedbackEffect::PressAndHold:
     case QFeedbackEffect::DragStart:
     case QFeedbackEffect::DragDropInZone:
     case QFeedbackEffect::DragDropOutOfZone:
     case QFeedbackEffect::DragCrossBoundary:
-    case QFeedbackEffect::Popup:
-    case QFeedbackEffect::PopupClose:
+    case QFeedbackEffect::Appear:
+    case QFeedbackEffect::Disappear:
     case QFeedbackEffect::Move:
         return ETouchFeedbackBasic;
     default:

@@ -50,6 +50,14 @@
 
 QT_USE_NAMESPACE
 
+static QObject *createDeclarativeThemeEfect(QDeclarativeEngine *engine, QJSEngine *jsengine)
+{
+    Q_UNUSED(engine)
+    Q_UNUSED(jsengine)
+
+    return new QDeclarativeThemeEffect;
+}
+
 class QDeclarativeFeedbackPlugin : public QDeclarativeExtensionPlugin
 {
     Q_OBJECT
@@ -66,6 +74,7 @@ public:
         qmlRegisterType<QDeclarativeFileEffect>(uri, major, minor, "FileEffect");
         qmlRegisterType<QDeclarativeHapticsEffect>(uri, major, minor, "HapticsEffect");
         qmlRegisterType<QDeclarativeThemeEffect>(uri, major, minor, "ThemeEffect");
+        qmlRegisterModuleApi("QtFeedback.ThemeEffect", major, minor, createDeclarativeThemeEfect);
     }
 };
 

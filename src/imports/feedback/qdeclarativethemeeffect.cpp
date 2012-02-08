@@ -112,3 +112,13 @@ void QDeclarativeThemeEffect::play()
     QFeedbackEffect::playThemeEffect(static_cast<QFeedbackEffect::Effect>(m_effect));
 }
 
+/*!
+    \qmlmethod ThemeEffect::play(Effect)
+
+    Call this to play the themed effect passed as parameter.
+
+*/
+void QDeclarativeThemeEffect::play(Effect effect)
+{
+    QFeedbackEffect::playThemeEffect(static_cast<QFeedbackEffect::Effect>(effect));
+}

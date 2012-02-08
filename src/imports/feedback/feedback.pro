@@ -12,7 +12,7 @@ oldqmldir.files += $$PWD/old/qmldir
 oldqmldir.path += $$[QT_INSTALL_IMPORTS]/$$OLDTARGETPATH
 INSTALLS += qmldir oldqmldir
 
-QT += declarative feedback
+QT += quick feedback
 
 HEADERS += qdeclarativehapticseffect_p.h \
            qdeclarativefileeffect_p.h \

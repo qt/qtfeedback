@@ -68,6 +68,7 @@ class QDeclarativeThemeEffect : public QObject
     Q_PROPERTY(Effect effect READ effect WRITE setEffect NOTIFY effectChanged)
 
     Q_CLASSINFO("DefaultMethod", "play()")
+    Q_CLASSINFO("OverloadedMethod", "play(Effect)")
 
     Q_ENUMS(Effect)
 
@@ -99,6 +100,7 @@ public:
 
 public slots:
     void play();
+    void play(Effect effect);
 
 signals:
     void effectChanged();

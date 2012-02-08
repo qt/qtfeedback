@@ -91,8 +91,7 @@ various \l {QFeedbackEffect}s.
 
 \section2 Platform Issues
 
-\note On Symbian, vibration feature needs to be enabled in the user profile for the API to work.
-\note On Maemo5, periodic vibration does not support attack or fade.
+\note Platforms might have user settings that enable/disables the vibration.
 
 \section1 Using Effects
 

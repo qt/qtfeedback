@@ -3,7 +3,7 @@
 ** Copyright (C) 2012 Nokia Corporation and/or its subsidiary(-ies).
 ** Contact: http://www.qt-project.org/
 **
-** This file is part of the Qt Mobility Components.
+** This file is part of the QtFeedback
 **
 ** $QT_BEGIN_LICENSE:BSD$
 ** You may use this file under the terms of the BSD license as follows:
@@ -39,7 +39,6 @@
 ****************************************************************************/
 
 import QtQuick 2.0
-import QtFeedback 5.0
 
 Rectangle {
     id: page
@@ -48,6 +47,8 @@ Rectangle {
     color: "olive"
 
     //![File Effect]
+    import QtFeedback 5.0
+
     FileEffect {
         id: myFileEffect
         loaded: false
@@ -61,6 +62,9 @@ Rectangle {
     //![File Effect]
 
     //![Haptics Effect]
+
+    import QtFeedback 5.0
+
     HapticsEffect {
         id: rumbleEffect
         attackIntensity: 0.0
@@ -78,20 +82,70 @@ Rectangle {
     //![Haptics Effect]
 
     //![Theme]
-    // My custom button
-    MouseArea {
-        Image { /* ... Pretty graphics here ... */ }
-        onClicked: ThemeEffect {effect: ThemeEffect.BasicButton;}
-    }
+    //Example 1: using ThemeEffect declaring element
 
-    ThemeEffect {
-        id: myOtherThemeEffect
-        effect: "RotateStep"
-    }
+        import QtFeedback 5.0
 
-    MouseArea {
-        onClicked: myOtherThemeEffect.play();
-    }
+        Rectangle {
+            width: 180; height: 20
+            radius:5
+            color: "lightgrey"
+            Text {
+                anchors.centerIn: parent
+                text: "Play Theme: Press"
+            }
+            ThemeEffect {
+                 id: myOtherThemeEffect
+                 effect: "Press"
+             }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    myOtherThemeEffect.play();
+                }
+            }
+        }
 
-    //![Theme]
-}
+        //Example 2: using ThemeEffect without declaring element
+
+        import QtFeedback.ThemeEffect 5.0 as Effect
+
+        Rectangle {
+            width: 180; height: 20
+            radius:5
+            color: "lightgrey"
+            Text {
+                anchors.centerIn: parent
+                text: "Play Theme: Press"
+            }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    Effect.effect = "Press"
+                    Effect.play();
+                }
+            }
+        }
+
+        //Example 3: using ThemeEffect without declaring element and calling overloaded play function
+
+        import QtFeedback.ThemeEffect 5.0 as Effect
+
+        Rectangle {
+            width: 180; height: 20
+            radius:5
+            color: "lightgrey"
+            Text {
+                anchors.centerIn: parent
+                text: "Play Theme: Press"
+            }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    Effect.play(Effect.Press)
+                }
+            }
+        }
+
+        //![Theme]
+    }

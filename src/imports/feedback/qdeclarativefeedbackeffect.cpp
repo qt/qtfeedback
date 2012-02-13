@@ -46,8 +46,6 @@
     \brief The FeedbackEffect element is the base class for all feedback effects.
     \ingroup qml-feedback-api
 
-    This element is part of the \bold{QtMobility.feedback 1.1} module.
-
     You can't create one of these elements directly, but several other elements
     inherit the methods and properties of these elements.
 

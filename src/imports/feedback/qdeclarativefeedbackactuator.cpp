@@ -46,8 +46,6 @@
     \brief The Actuator element represents a feedback actuator.
     \ingroup qml-feedback-api
 
-    This element is part of the \bold{QtMobility.feedback 1.1} module.
-
     The Actuator class maps directly to the QFeedbackActuator C++ class, and
     can be used with HapticsEffect elements.
 

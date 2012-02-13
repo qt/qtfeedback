@@ -46,8 +46,6 @@
     \ingroup qml-feedback-api
     \inherits FeedbackEffect
 
-    This element is part of the \bold{QtMobility.feedback 1.1} module.
-
     \snippet doc/src/snippets/declarative/declarative-feedback.qml File Effect
 
     \sa HapticsEffect, {QFeedbackActuator}

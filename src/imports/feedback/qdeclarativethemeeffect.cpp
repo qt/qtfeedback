@@ -45,8 +45,6 @@
     \brief The ThemeEffect element represents a themed feedback effect.
     \ingroup qml-feedback-api
 
-    This element is part of the \bold{QtMobility.feedback 1.1} module.
-
     This element is used for playing feedback effects that follow the
     system theme.  The actual feedback might be haptic, audio or some other
     method.

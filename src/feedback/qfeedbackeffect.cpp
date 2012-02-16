@@ -617,7 +617,7 @@ QFeedbackEffect::State QFeedbackHapticsEffect::state() const
     specific feature in the audio data. For example, you could have a
     phone vibrating along with the bass of a rock song.
 
-    Although Qt Mobility does not let you record \c .ifr files, it lets
+    Although Qt Feedback does not let you record \c .ifr files, it lets
     you play them back using the QFeedbackFileEffect class. Setting
     up a QFeedbackFileEffect and starting it is done as follows:
 

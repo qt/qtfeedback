@@ -609,7 +609,7 @@ QFeedbackEffect::State QFeedbackHapticsEffect::state() const
     Several different mime types may be supported on a system, including
     both haptic data files, and audio files.
 
-    The files containing haptics data are usually suffixed \c .ifr.
+    The files containing haptics data are usually suffixed \c .ivt.
     The feedback is usually varying in
     \l{QFeedbackHapticsEffect::}{intensity()}, and is for that reason
     often referred to as a "haptic tune". They are created, for
@@ -617,13 +617,13 @@ QFeedbackEffect::State QFeedbackHapticsEffect::state() const
     specific feature in the audio data. For example, you could have a
     phone vibrating along with the bass of a rock song.
 
-    Although Qt Feedback does not let you record \c .ifr files, it lets
+    Although Qt Feedback does not let you record \c .ivt files, it lets
     you play them back using the QFeedbackFileEffect class. Setting
     up a QFeedbackFileEffect and starting it is done as follows:
 
     \code
         QFeedbackFileEffect hapticTune;
-        hapticTune.setSource(QUrl::fromLocalFile("mySavedRumble.ifr"));
+        hapticTune.setSource(QUrl::fromLocalFile("mySavedRumble.ivt"));
         hapticTune.load();
         hapticTune.start();
     \endcode

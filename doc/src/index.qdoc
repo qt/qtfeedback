@@ -28,13 +28,13 @@
 /*!
 
 \page index.html
-\title Feedback
+\title C++ Feedback API
 
 \brief An API enabling a client to provide tactile and audio feedback to user actions.
 
 \ingroup mobility
 
-The Feedback API enables a client to control and provide tactile and audio feedback
+The C++ Feedback API enables a client to control and provide tactile and audio feedback
 to the user. The feedback is in response to user actions. For example, touching an
 onscreen button. Control of the feedback involves control of the vibration of
 the device, when a vibrator is used, or the piezo feedback from the screen.
@@ -192,12 +192,6 @@ application.
     \o \l{hapticsquare}{Haptic Square}
     \o \l{hapticsplayer}{Haptics Player}
 \endlist
-
-\section1 QML Elements
-
-For details on the QML support provided for the Feedback API see the documentation for the \l {Feedback QML Plugin}.
-
-
 
 */
 

@@ -45,7 +45,7 @@
     \section1 Overview
 
     The QML Feedback API allows application developers to implement various types of feedback (usually vibration) to their QML applications.
-    Use this with the QML \i {QtFeedback import} statement.
+    Use this with the QML \e {QtFeedback import} statement.
 
 
 

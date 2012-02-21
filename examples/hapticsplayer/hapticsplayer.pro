@@ -1,7 +1,4 @@
-TEMPLATE = app
-TARGET = hapticsplayer
-DEPENDPATH += .
-INCLUDEPATH += . $$QT_MOBILITY_SOURCE_TREE/src/feedback
+INCLUDEPATH += $$QT_MOBILITY_SOURCE_TREE/src/feedback
 
 #
 # mobility.prf should do this (since it's platform and release/debug dependent,
@@ -11,7 +8,6 @@ INCLUDEPATH += . $$QT_MOBILITY_SOURCE_TREE/src/feedback
 #
 # LIBS += -lQtFeedback
 
-# Input
 HEADERS += hapticsplayer.h
 SOURCES += hapticsplayer.cpp main.cpp
 FORMS += hapticsplayer.ui

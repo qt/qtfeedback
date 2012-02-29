@@ -53,7 +53,7 @@
 
     1. Capability
     \list
-    \o Envelope - Value specifying that the device can bound its intensity by an Envelope.
+    \o Envelope - Value specifying that the device can bound its intensity by an envelope.
     \o Period  - Value specifying that the device can play periodic effects.
     \endlist
 

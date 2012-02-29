@@ -50,11 +50,11 @@ void completeExample();
 void completeExample()
 {
 //! [Play the system theme button click effect]
-    QFeedbackEffect::playThemeEffect(QFeedbackEffect::ThemeBasicButton);
+    QFeedbackEffect::playThemeEffect(QFeedbackEffect::Press);
 //! [Play the system theme button click effect]
 
 //! [Play the system theme bounce effect]
-    QFeedbackEffect::playThemeEffect(QFeedbackEffect::ThemeBounceEffect);
+    QFeedbackEffect::playThemeEffect(QFeedbackEffect::DragStart);
 //! [Play the system theme bounce effect]
 
 //! [Define a custom haptic effect]

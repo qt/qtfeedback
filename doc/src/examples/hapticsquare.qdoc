@@ -36,8 +36,8 @@
 
     It provides an example of how to use the Qt Feedback
     \list
-    \o play "system theme" haptic effects corresponding to certain predefined events
-    \o play a custom effect, single or repeating
+    \li play "system theme" haptic effects corresponding to certain predefined events
+    \li play a custom effect, single or repeating
     \endlist
 
     \section2 Use Case
@@ -53,10 +53,10 @@
     extensible API.  Some common uses for tactile feedback are:
 
     \list
-    \o maintain consistency with system theme for tactile feedback about interface events (button clicks, scrolling, etc)
-    \o notify the user of an application-specific event (invalid operation, status change, etc)
-    \o multisensory user interface (status can be "read" by touching the screen, tactile interfaces, etc)
-    \o immersive gaming experiences (explosions, impacts, collisions, etc)
+    \li maintain consistency with system theme for tactile feedback about interface events (button clicks, scrolling, etc)
+    \li notify the user of an application-specific event (invalid operation, status change, etc)
+    \li multisensory user interface (status can be "read" by touching the screen, tactile interfaces, etc)
+    \li immersive gaming experiences (explosions, impacts, collisions, etc)
     \endlist
 
     This example application provides some short snippets which illustrate how
@@ -73,18 +73,18 @@
     \image hapticsquare-example.png
 
     \list
-    \o "Rumble!" plays a non-repeating effect with symmetric attack and decay
-    \o "Ocean" is a toggle button which plays a repeating ocean wave-like effect
-    \o "Click" plays the system theme effect for a basic button click
-    \o "Oops!" plays the system theme effect for a negative or invalid response
+    \li "Rumble!" plays a non-repeating effect with symmetric attack and decay
+    \li "Ocean" is a toggle button which plays a repeating ocean wave-like effect
+    \li "Click" plays the system theme effect for a basic button click
+    \li "Oops!" plays the system theme effect for a negative or invalid response
     \endlist
 
     The example implements two classes:
 
     \list
-        \o \c {HapticButton}: Implementation of a button. It
+        \li \c {HapticButton}: Implementation of a button. It
             inherits QWidget and sends signals for button clicks.
-        \o \c {Dialog}: A QDialog subclass that displays the four
+        \li \c {Dialog}: A QDialog subclass that displays the four
             \c{HapticButton}s mentioned above,
             connects them to its slots, and implements the functionality to
             play the haptic effects.

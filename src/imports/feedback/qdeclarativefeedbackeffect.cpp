@@ -55,23 +55,23 @@
     This enum describes the possible predefined duration types. Generally a specific
     value in milliseconds can be supplied instead of one of these values.
     \list
-    \o Feedback.Infinite - Infinite effect duration
+    \li Feedback.Infinite - Infinite effect duration
     \endlist
 
     2. State
     This enum describes the state of the effect. An effect will be in one of these states.
     \list
-    \o Feedback.stopped - The effect is not running. This is the initial state.
-    \o Feedback.paused  - The effect is paused.
-    \o Feedback.running - The effect is running.
-    \o Feedback.loading - The effect is loading.
+    \li Feedback.stopped - The effect is not running. This is the initial state.
+    \li Feedback.paused  - The effect is paused.
+    \li Feedback.running - The effect is running.
+    \li Feedback.loading - The effect is loading.
     \endlist
 
     3. ErrorType
     This enum describes the possible errors happening on the effect.
     \list
-    \o Feedback.UnknownError - An unknown error occurred.
-    \o Feedback.DeviceBusy - The feedback could not start because the device is busy,
+    \li Feedback.UnknownError - An unknown error occurred.
+    \li Feedback.DeviceBusy - The feedback could not start because the device is busy,
        the device could be busy if a higher-priority client is using the haptics/actuator device.
     \endlist
 
@@ -164,10 +164,10 @@ void QDeclarativeFeedbackEffect::setDuration(int newDuration)
 
   This is the current state of the effect.  It is one of:
   \list
-  \o Feedback.Stopped - the effect is not playing
-  \o Feedback.Loading - the effect is being loaded
-  \o Feedback.Running - the effect is playing
-  \o Feedback.Paused - the effect was being played, but is now paused.
+  \li Feedback.Stopped - the effect is not playing
+  \li Feedback.Loading - the effect is being loaded
+  \li Feedback.Running - the effect is playing
+  \li Feedback.Paused - the effect was being played, but is now paused.
   \endlist
   \sa Feedback
   */
@@ -187,8 +187,8 @@ void QDeclarativeFeedbackEffect::setState(QDeclarativeFeedbackEffect::State newS
   This property holds the error status of the FeedbackEffect.
   The error is one of the following values:
   \list
-  \o Feedback.UnknownError - An unknown error occurred
-  \o Feedback.DeviceBusy - The device resource is already being used.
+  \li Feedback.UnknownError - An unknown error occurred
+  \li Feedback.DeviceBusy - The device resource is already being used.
   \endlist
 
   \sa Feedback QFeedbackEffect::ErrorType

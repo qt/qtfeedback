@@ -71,20 +71,20 @@ bool QDeclarativeThemeEffect::effectSupported() {
 
     This property holds the specific themed effect type to play.  It is one of:
 
-    \o Effect.Undefined - Undefined feedback. No feedback is given.
-    \o Effect.Press - Feedback for when the screen is pressed.
-    \o Effect.Release - Feedback for touch release.
-    \o Effect.PressWeak - A weak feedback for press.
-    \o Effect.ReleaseWeak - A weak feedback for release.
-    \o Effect.PressStrong - A strong feedback for press.
-    \o Effect.ReleaseStrong - A strong feedback for release.
-    \o Effect.DragStart - Feedback for when dragging starts.
-    \o Effect.DragDropInZone - Feedback for when dragging ends and touch is released inside a drop zone.
-    \o Effect.DragDropOutOfZone - Feedback for when dragging ends and touch is released outside a drop zone.
-    \o Effect.DragCrossBoundary - Feedback for when crossing a boundary while dragging.
-    \o Effect.Appear - Feedback for when an item is shown.
-    \o Effect.Disappear - Feedback for when an item item is closed.
-    \o Effect.Move - Feedback for dragging on screen.
+    \li Effect.Undefined - Undefined feedback. No feedback is given.
+    \li Effect.Press - Feedback for when the screen is pressed.
+    \li Effect.Release - Feedback for touch release.
+    \li Effect.PressWeak - A weak feedback for press.
+    \li Effect.ReleaseWeak - A weak feedback for release.
+    \li Effect.PressStrong - A strong feedback for press.
+    \li Effect.ReleaseStrong - A strong feedback for release.
+    \li Effect.DragStart - Feedback for when dragging starts.
+    \li Effect.DragDropInZone - Feedback for when dragging ends and touch is released inside a drop zone.
+    \li Effect.DragDropOutOfZone - Feedback for when dragging ends and touch is released outside a drop zone.
+    \li Effect.DragCrossBoundary - Feedback for when crossing a boundary while dragging.
+    \li Effect.Appear - Feedback for when an item is shown.
+    \li Effect.Disappear - Feedback for when an item item is closed.
+    \li Effect.Move - Feedback for dragging on screen.
   \endlist
 
   \sa QFeedbackEffect::Effect

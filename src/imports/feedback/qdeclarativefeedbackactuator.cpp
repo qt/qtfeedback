@@ -53,15 +53,15 @@
 
     1. Capability
     \list
-    \o Envelope - Value specifying that the device can bound its intensity by an Envelope.
-    \o Period  - Value specifying that the device can play periodic effects.
+    \li Envelope - Value specifying that the device can bound its intensity by an Envelope.
+    \li Period  - Value specifying that the device can play periodic effects.
     \endlist
 
     2. State
     \list
-    \o Busy    - The actuator is busy.
-    \o Ready   - The actuator is ready to play an effect.
-    \o Unknown - The actuator is in an unknown state.
+    \li Busy    - The actuator is busy.
+    \li Ready   - The actuator is ready to play an effect.
+    \li Unknown - The actuator is in an unknown state.
     \endlist
 
     \sa HapticsEffect, {QFeedbackActuator}
@@ -129,8 +129,8 @@ QFeedbackActuator::State QDeclarativeFeedbackActuator::state() const
     \qmlmethod bool Actuator::isCapabilitySupported(enumeration capability)
     Returns if the actuator supports the supplied \a capability, available capabilities are:
     \list
-    \o Envelope - Value specifying that the device can bound its intensity by an Envelope.
-    \o Period   - Value specifying that the device can play periodic effects.
+    \li Envelope - Value specifying that the device can bound its intensity by an Envelope.
+    \li Period   - Value specifying that the device can play periodic effects.
     \endlist
 */
 bool QDeclarativeFeedbackActuator::isCapabilitySupported(QFeedbackActuator::Capability capbility) const

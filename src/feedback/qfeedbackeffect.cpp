@@ -286,8 +286,8 @@ bool QFeedbackEffect::supportsThemeEffect()
     it can be played:
 
     \list
-        \o duration(): The total duration of the effect in milliseconds.
-        \o intensity(): The intensity, e.g., how hard the device will vibrate.
+        \li duration(): The total duration of the effect in milliseconds.
+        \li intensity(): The intensity, e.g., how hard the device will vibrate.
     \endlist
 
     An effect can, for example, be set up as follows:

@@ -80,9 +80,9 @@ for file feedback plugins (where only the highest priority plugin for each
 supported mime-type is used).  The interface classes which must be implemented
 by a plugin to provide effects to clients are:
 \list
-    \o \l{QFeedbackHapticsInterface} for \l{QFeedbackHapticsEffect}
-    \o \l{QFeedbackFileInterface} for \l{QFeedbackFileEffect}
-    \o \l{QFeedbackThemeInterface} for the built-in theme effects (\l{QFeedbackEffect::ThemeEffect}).
+    \li \l{QFeedbackHapticsInterface} for \l{QFeedbackHapticsEffect}
+    \li \l{QFeedbackFileInterface} for \l{QFeedbackFileEffect}
+    \li \l{QFeedbackThemeInterface} for the built-in theme effects (\l{QFeedbackEffect::ThemeEffect}).
 \endlist
 
 Generally, the device platform will provide an implementation of each of the
@@ -180,17 +180,17 @@ application.
 
 \section1 Main Classes
 \list
-    \o \l{QFeedbackEffect}
-    \o \l{QFeedbackHapticsEffect}
-    \o \l{QFeedbackFileEffect}
-    \o \l{QFeedbackActuator}
-    \o \l{QFeedbackInterface}
+    \li \l{QFeedbackEffect}
+    \li \l{QFeedbackHapticsEffect}
+    \li \l{QFeedbackFileEffect}
+    \li \l{QFeedbackActuator}
+    \li \l{QFeedbackInterface}
 \endlist
 
 \section1 Examples
 \list
-    \o \l{hapticsquare}{Haptic Square}
-    \o \l{hapticsplayer}{Haptics Player}
+    \li \l{hapticsquare}{Haptic Square}
+    \li \l{hapticsplayer}{Haptics Player}
 \endlist
 
 \section1 QML Elements

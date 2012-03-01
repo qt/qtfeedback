@@ -38,9 +38,9 @@
 
     It provides an example of how to use the QtMobility libraries to:
     \list
-    \o play "system theme" haptic effects corresponding to certain predefined events
-    \o play a dynamic custom effect, single or repeating
-    \o play a custom effect which is stored in a file
+    \li play "system theme" haptic effects corresponding to certain predefined events
+    \li play a dynamic custom effect, single or repeating
+    \li play a custom effect which is stored in a file
     \endlist
 
     \section2 Use Case

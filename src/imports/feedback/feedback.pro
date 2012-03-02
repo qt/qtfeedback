@@ -1,6 +1,5 @@
 TARGET  = declarative_feedback
 TARGETPATH = QtFeedback
-OLDTARGETPATH = Qt/feedback
 include(qfeedbackimport.pri)
 target.path = $$[QT_INSTALL_IMPORTS]/$$TARGETPATH
 DESTDIR = $$QT.feedback.imports/$$TARGETPATH
@@ -8,9 +7,7 @@ INSTALLS += target
 
 qmldir.files += $$PWD/qmldir
 qmldir.path +=  $$[QT_INSTALL_IMPORTS]/$$TARGETPATH
-oldqmldir.files += $$PWD/old/qmldir
-oldqmldir.path += $$[QT_INSTALL_IMPORTS]/$$OLDTARGETPATH
-INSTALLS += qmldir oldqmldir
+INSTALLS += qmldir
 
 QT += declarative feedback
 

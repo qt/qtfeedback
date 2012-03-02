@@ -64,26 +64,16 @@ class QDeclarativeFeedbackPlugin : public QDeclarativeExtensionPlugin
 public:
     virtual void registerTypes(const char *uri)
     {
-        const char *currentUri = "QtFeedback";
-        // Support for this will be removed. See: https://bugreports.qt-project.org/browse/QTBUG-24285
-        const char *oldUri = "Qt.feedback";
-        Q_ASSERT(QLatin1String(uri) == currentUri || QLatin1String(uri) == oldUri);
-        Q_UNUSED(uri);
+        Q_ASSERT(QLatin1String(uri) == QLatin1String("QtFeedback"));
 
         int major = 5;
         int minor = 0;
-        qmlRegisterUncreatableType<QDeclarativeFeedbackEffect>(currentUri, major, minor, "Feedback", "this is the feedback namespace");
-        qmlRegisterUncreatableType<QDeclarativeFeedbackEffect>(currentUri, major, minor, "FeedbackEffect", "this is the base feedback effect class");
-        qmlRegisterType<QDeclarativeFeedbackActuator>(currentUri, major, minor, "Actuator");
-        qmlRegisterType<QDeclarativeFileEffect>(currentUri, major, minor, "FileEffect");
-        qmlRegisterType<QDeclarativeHapticsEffect>(currentUri, major, minor, "HapticsEffect");
-        qmlRegisterType<QDeclarativeThemeEffect>(currentUri, major, minor, "ThemeEffect");
-        qmlRegisterUncreatableType<QDeclarativeFeedbackEffect>(oldUri, major, minor, "Feedback", "this is the feedback namespace");
-        qmlRegisterUncreatableType<QDeclarativeFeedbackEffect>(oldUri, major, minor, "FeedbackEffect", "this is the base feedback effect class");
-        qmlRegisterType<QDeclarativeFeedbackActuator>(oldUri, major, minor, "Actuator");
-        qmlRegisterType<QDeclarativeFileEffect>(oldUri, major, minor, "FileEffect");
-        qmlRegisterType<QDeclarativeHapticsEffect>(oldUri, major, minor, "HapticsEffect");
-        qmlRegisterType<QDeclarativeThemeEffect>(oldUri, major, minor, "ThemeEffect");
+        qmlRegisterUncreatableType<QDeclarativeFeedbackEffect>(uri, major, minor, "Feedback", "this is the feedback namespace");
+        qmlRegisterUncreatableType<QDeclarativeFeedbackEffect>(uri, major, minor, "FeedbackEffect", "this is the base feedback effect class");
+        qmlRegisterType<QDeclarativeFeedbackActuator>(uri, major, minor, "Actuator");
+        qmlRegisterType<QDeclarativeFileEffect>(uri, major, minor, "FileEffect");
+        qmlRegisterType<QDeclarativeHapticsEffect>(uri, major, minor, "HapticsEffect");
+        qmlRegisterType<QDeclarativeThemeEffect>(uri, major, minor, "ThemeEffect");
         qmlRegisterModuleApi("QtFeedback.ThemeEffect", major, minor, createDeclarativeThemeEfect);
     }
 };

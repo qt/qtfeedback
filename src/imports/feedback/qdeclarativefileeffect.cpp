@@ -77,7 +77,7 @@ void QDeclarativeFileEffect::setLoaded(bool v)
 /*!
   \qmlproperty url FileEffect::source
 
-  This property stores the url for the feedback data.
+  This property stores the URL for the feedback data.
   */
 QUrl QDeclarativeFileEffect::source() const
 {
@@ -94,7 +94,7 @@ void QDeclarativeFileEffect::setSource(const QUrl & url)
 /*!
   \qmlproperty list<string> FileEffect::supportedMimeTypes
 
-  This property holds the MIME types supported for playing effects from file.
+  This property holds the MIME types supported for playing effects from a file.
   */
 QStringList QDeclarativeFileEffect::supportedMimeTypes()
 {

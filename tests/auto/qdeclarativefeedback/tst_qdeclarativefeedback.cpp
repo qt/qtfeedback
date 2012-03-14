@@ -90,6 +90,19 @@ void tst_qdeclarativefeedback::hapticsEffect()
     QVERIFY(!hapticsEffect->property("actuator").isNull());
     QCOMPARE(hapticsEffect->property("state").toInt(), (int)(QFeedbackEffect::Stopped));
 
+    hapticsEffect->setProperty("attackIntensity", 0.2);
+    QCOMPARE(hapticsEffect->property("attackIntensity").toReal(), 0.2);
+    hapticsEffect->setProperty("attackTime", 500);
+    QCOMPARE(hapticsEffect->property("attackTime").toInt(), 500);
+    hapticsEffect->setProperty("intensity", 0.8);
+    QCOMPARE(hapticsEffect->property("intensity").toReal(), 0.8);
+    hapticsEffect->setProperty("duration", 500);
+    QCOMPARE(hapticsEffect->property("duration").toInt(), 500);
+    hapticsEffect->setProperty("fadeTime", 500);
+    QCOMPARE(hapticsEffect->property("fadeTime").toInt(), 500);
+    hapticsEffect->setProperty("fadeIntensity", 0.2);
+    QCOMPARE(hapticsEffect->property("fadeIntensity").toReal(), 0.2);
+
     if (!hapticsEffect->property("availableActuators").toList().isEmpty()) {
       QCOMPARE(hapticsEffect->property("running").toBool(), false);
       QCOMPARE(hapticsEffect->property("paused").toBool(), false);

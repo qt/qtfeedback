@@ -90,7 +90,7 @@ int QDeclarativeHapticsEffect::duration() const
 */
 void QDeclarativeHapticsEffect::setIntensity(qreal intensity)
 {
-    if (qFuzzyCompare(intensity, d->intensity())) {
+    if (!qFuzzyCompare(intensity, d->intensity())) {
         d->setIntensity(intensity);
         emit intensityChanged();
     }
@@ -126,7 +126,7 @@ int QDeclarativeHapticsEffect::attackTime() const
 */
 void QDeclarativeHapticsEffect::setAttackIntensity(qreal intensity)
 {
-    if (qFuzzyCompare(intensity, d->attackIntensity())) {
+    if (!qFuzzyCompare(intensity, d->attackIntensity())) {
         d->setAttackIntensity(intensity);
         emit intensityChanged();
     }
@@ -157,7 +157,7 @@ int QDeclarativeHapticsEffect::fadeTime() const
 
 void QDeclarativeHapticsEffect::setFadeIntensity(qreal intensity)
 {
-    if (qFuzzyCompare(intensity, d->fadeIntensity())) {
+    if (!qFuzzyCompare(intensity, d->fadeIntensity())) {
         d->setFadeIntensity(intensity);
         emit fadeIntensityChanged();
     }

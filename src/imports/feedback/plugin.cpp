@@ -39,8 +39,7 @@
 **
 ****************************************************************************/
 
-#include <QtDeclarative/qdeclarativeextensionplugin.h>
-#include <QtDeclarative/qdeclarative.h>
+#include <QtQml/QQmlExtensionPlugin>
 
 #include "qdeclarativehapticseffect_p.h"
 #include "qdeclarativefileeffect_p.h"

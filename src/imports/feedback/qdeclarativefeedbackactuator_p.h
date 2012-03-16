@@ -54,7 +54,7 @@
 #ifndef QDECLARATIVEFEEDBACKACTUATOR_P_H
 #define QDECLARATIVEFEEDBACKACTUATOR_P_H
 
-#include <QtDeclarative/qdeclarative.h>
+#include <QtQml/qqml.h>
 #include "qfeedbackactuator.h"
 
 QT_USE_NAMESPACE

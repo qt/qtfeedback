@@ -21,7 +21,7 @@ copy2build.commands = $$QMAKE_COPY ${QMAKE_FILE_IN} ${QMAKE_FILE_OUT}
 copy2build.name = COPY ${QMAKE_FILE_IN}
 copy2build.CONFIG += no_link
 # `clean' should leave the build in a runnable state, which means it shouldn't delete qmldir
-copy2build.CONFIG += no_clean
+copy2build.CONFIGIG += no_clean
 
 QMAKE_EXTRA_COMPILERS += copy2build
 

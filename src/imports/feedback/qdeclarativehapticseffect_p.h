@@ -54,7 +54,6 @@
 #ifndef QDECLARATIVEHAPTICSEFFECT_P_H
 #define QDECLARATIVEHAPTICSEFFECT_P_H
 
-#include <QtDeclarative/qdeclarative.h>
 #include "qdeclarativefeedbackeffect_p.h"
 #include "qdeclarativefeedbackactuator_p.h"
 

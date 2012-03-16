@@ -54,7 +54,7 @@
 #ifndef QDECLARATIVETHEMEEFFECT_P_H
 #define QDECLARATIVETHEMEEFFECT_P_H
 
-#include <QtDeclarative/qdeclarative.h>
+#include <QtQml/qqml.h>
 #include <qfeedbackeffect.h>
 
 QT_USE_NAMESPACE

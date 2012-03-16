@@ -54,7 +54,6 @@
 #ifndef QDECLARATIVEFILEEFFECT_P_H
 #define QDECLARATIVEFILEEFFECT_P_H
 
-#include <QtDeclarative/qdeclarative.h>
 #include "qdeclarativefeedbackeffect_p.h"
 
 QT_USE_NAMESPACE

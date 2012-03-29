@@ -60,6 +60,8 @@ static QObject *createDeclarativeThemeEfect(QDeclarativeEngine *engine, QJSEngin
 class QDeclarativeFeedbackPlugin : public QDeclarativeExtensionPlugin
 {
     Q_OBJECT
+    Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QQmlExtensionInterface" FILE "plugin.json")
+
 public:
     virtual void registerTypes(const char *uri)
     {
@@ -78,5 +80,3 @@ public:
 };
 
 #include "plugin.moc"
-
-Q_EXPORT_PLUGIN2(declarative_feedback, QDeclarativeFeedbackPlugin)

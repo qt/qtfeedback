@@ -23,7 +23,17 @@ copy2build.CONFIG += no_link
 # `clean' should leave the build in a runnable state, which means it shouldn't delete qmldir
 copy2build.CONFIG += no_clean
 
-QMAKE_EXTRA_COMPILERS += copy2build
+QMLTYPEFILE = $${_PRO_FILE_PWD_}/plugins.qmltypes
+copyqmltypes2build.input = QMLTYPEFILE
+copyqmltypes2build.output = $$QT.feedback.imports/$$TARGETPATH/plugins.qmltypes
+!contains(TEMPLATE_PREFIX, vc):copyqmltypes2build.variable_out = PRE_TARGETDEPS
+copyqmltypes2build.commands = $$QMAKE_COPY ${QMAKE_FILE_IN} ${QMAKE_FILE_OUT}
+copyqmltypes2build.name = COPY ${QMAKE_FILE_IN}
+copyqmltypes2build.CONFIG += no_link
+# `clean' should leave the build in a runnable state, which means it shouldn't delete qmldir
+copyqmltypes2build.CONFIG += no_clean
+
+QMAKE_EXTRA_COMPILERS += copy2build copyqmltypes2build
 
 TARGET = $$qtLibraryTarget($$TARGET)
 contains(QT_CONFIG, reduce_exports):CONFIG += hide_symbols

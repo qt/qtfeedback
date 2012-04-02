@@ -1,5 +1,3 @@
-include(../staticconfig.pri)
-
 TEMPLATE = subdirs
 
 # Feedback API examples

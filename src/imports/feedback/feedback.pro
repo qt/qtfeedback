@@ -7,7 +7,9 @@ INSTALLS += target
 
 qmldir.files += $$PWD/qmldir
 qmldir.path +=  $$[QT_INSTALL_IMPORTS]/$$TARGETPATH
-INSTALLS += qmldir
+pluginTypes.files += $$PWD/plugins.qmltypes
+pluginTypes.path +=  $$[QT_INSTALL_IMPORTS]/$$TARGETPATH
+INSTALLS += qmldir pluginTypes
 
 QT += declarative feedback
 

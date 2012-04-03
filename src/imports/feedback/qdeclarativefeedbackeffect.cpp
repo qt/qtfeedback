@@ -214,6 +214,7 @@ void QDeclarativeFeedbackEffect::updateState() {
         m_paused = paused;
         emit pausedChanged();
     }
+    emit stateChanged();
 }
 
 /*!

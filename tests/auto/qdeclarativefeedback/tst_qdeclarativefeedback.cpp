@@ -44,10 +44,12 @@
 #include <QtDeclarative/qdeclarativeengine.h>
 #include <qfeedbackeffect.h>
 #include <qfeedbackactuator.h>
+#include <QSignalSpy>
+#include <QDebug>
 
 #ifdef Q_OS_SYMBIAN
 // In Symbian OS test data is located in applications private dir
-#define SRCDIR "."
+#define "."
 #endif
 
 Q_DECLARE_METATYPE(QFeedbackEffect::Effect);
@@ -81,6 +83,10 @@ void tst_qdeclarativefeedback::hapticsEffect()
     QObject *hapticsEffect = component.create();
     QVERIFY(hapticsEffect != 0);
 
+    QSignalSpy stateSpy(hapticsEffect, SIGNAL(stateChanged()));
+    QVERIFY(stateSpy.isValid());
+    QCOMPARE(stateSpy.count(), 0);
+
     QCOMPARE(hapticsEffect->property("attackIntensity").toReal(), 0.0);
     QCOMPARE(hapticsEffect->property("attackTime").toInt(), 250);
     QCOMPARE(hapticsEffect->property("intensity").toReal(), 1.0);
@@ -106,14 +112,32 @@ void tst_qdeclarativefeedback::hapticsEffect()
     if (!hapticsEffect->property("availableActuators").toList().isEmpty()) {
       QCOMPARE(hapticsEffect->property("running").toBool(), false);
       QCOMPARE(hapticsEffect->property("paused").toBool(), false);
+      QCOMPARE(hapticsEffect->property("state").toInt(), (int)(QFeedbackEffect::Stopped));
+
       hapticsEffect->setProperty("running", true);
       QCOMPARE(hapticsEffect->property("running").toBool(), true);
       QCOMPARE(hapticsEffect->property("paused").toBool(), false);
-      hapticsEffect->setProperty("paused", true);
+      QCOMPARE(stateSpy.count(), 1);
+      QCOMPARE(hapticsEffect->property("state").toInt(), (int)(QFeedbackEffect::Running));
 
+      hapticsEffect->setProperty("paused", true);
       // XXX make sure we just test dummy backend
       QCOMPARE(hapticsEffect->property("running").toBool(), false);
       QCOMPARE(hapticsEffect->property("paused").toBool(), true);
+      QCOMPARE(stateSpy.count(), 2);
+      QCOMPARE(hapticsEffect->property("state").toInt(), (int)(QFeedbackEffect::Paused));
+
+      hapticsEffect->setProperty("running", true);
+      QCOMPARE(hapticsEffect->property("running").toBool(), true);
+      QCOMPARE(hapticsEffect->property("paused").toBool(), false);
+      QCOMPARE(stateSpy.count(), 3);
+      QCOMPARE(hapticsEffect->property("state").toInt(), (int)(QFeedbackEffect::Running));
+
+      hapticsEffect->setProperty("running", false);
+      QCOMPARE(hapticsEffect->property("running").toBool(), false);
+      QCOMPARE(hapticsEffect->property("paused").toBool(), false);
+      QCOMPARE(stateSpy.count(), 4);
+      QCOMPARE(hapticsEffect->property("state").toInt(), (int)(QFeedbackEffect::Stopped));
     }
     delete hapticsEffect;
 }

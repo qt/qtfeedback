@@ -3,9 +3,6 @@
 );
 %moduleheaders = ( # restrict the module headers to those found in relative path
 );
-%classnames = (
-    "qtfeedbackversion.h" => "QtFeedbackVersion",
-);
 %mastercontent = (
     "feedback" => "#include <QtFeedback/QtFeedback>\n",
 );

@@ -4,9 +4,8 @@ TARGET = QtFeedback
 QPRO_PWD = $PWD
 
 CONFIG += module
-MODULE_PRI = ../../modules/qt_feedback.pri
 
-QT = core gui network
+QT = core
 
 DEFINES += QT_BUILD_FEEDBACK_LIB QT_MAKEDLL
 

@@ -42,6 +42,7 @@
 #ifndef QFEEDBACK_MMK_H
 #define QFEEDBACK_MMK_H
 
+#include <QtCore/QHash>
 
 #include <qfeedbackplugininterfaces.h>
 

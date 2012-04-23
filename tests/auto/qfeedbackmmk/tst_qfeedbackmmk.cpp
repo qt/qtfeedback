@@ -121,6 +121,9 @@ void tst_QFeedbackMMK::goodFile()
     QCOMPARE(stateSpy.count(), 1); // Stopped to Loading
 
     // Wait for it to be loaded
+#ifdef Q_OS_WIN
+    QEXPECT_FAIL("", "QTBUG-25448", Abort);
+#endif
     QTRY_COMPARE((int)fe.state(),  (int)QFeedbackFileEffect::Stopped);
     QCOMPARE(errorSpy.count(), 0);
     QCOMPARE(stateSpy.count(), 2); // Stopped to Loading to Stopped

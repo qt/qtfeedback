@@ -452,6 +452,7 @@ QFeedbackThemeInterface *QFeedbackThemeInterface::instance()
 }
 
 /*!
+    \internal
     \class QFeedbackFileInterface
     \ingroup feedback
 
@@ -464,6 +465,7 @@ QFeedbackThemeInterface *QFeedbackThemeInterface::instance()
 */
 
 /*!
+    \internal
     \fn QFeedbackFileInterface::setLoaded(QFeedbackFileEffect* effect, bool value)
 
     Sets the state of the effect \a effect to be loaded if \a value is true, otherwise unloaded.
@@ -472,18 +474,21 @@ QFeedbackThemeInterface *QFeedbackThemeInterface::instance()
 */
 
 /*!
+    \internal
     \fn QFeedbackFileInterface::setEffectState(QFeedbackFileEffect *effect, QFeedbackEffect::State state)
 
     Sets the state of \a effect to \a state.
 */
 
 /*!
+    \internal
     \fn QFeedbackFileInterface::effectState(const QFeedbackFileEffect *effect)
 
     Returns the current state of the effect \a effect.
 */
 
 /*!
+    \internal
     \fn QFeedbackFileInterface::effectDuration(const QFeedbackFileEffect *effect)
 
     Return the duration of \a effect, in milliseconds.
@@ -491,6 +496,7 @@ QFeedbackThemeInterface *QFeedbackThemeInterface::instance()
 */
 
 /*!
+    \internal
     \fn QFeedbackFileInterface::supportedMimeTypes()
 
     Returns a list of the MIME types supported by this plugin.
@@ -509,6 +515,7 @@ QFeedbackFileInterface *QFeedbackFileInterface::instance()
 }
 
 /*!
+    \internal
     \fn QFeedbackFileInterface::reportLoadFinished(QFeedbackFileEffect *effect, bool success)
 
     This is the function the backend should call when it has finished trying to load the effect \a effect.

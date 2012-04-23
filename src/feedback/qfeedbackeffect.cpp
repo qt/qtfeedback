@@ -539,7 +539,7 @@ void QFeedbackHapticsEffect::setActuator(QFeedbackActuator *actuator)
         priv->actuator = actuator;
     } else {
         QList<QFeedbackActuator*> list = QFeedbackActuator::actuators();
-        if  (!list.isEmpty()) {
+        if (!list.isEmpty()) {
             priv->actuator = list.first();
         } else {
             priv->actuator = new QFeedbackActuator(this);
@@ -601,6 +601,7 @@ QFeedbackEffect::State QFeedbackHapticsEffect::state() const
 }
 
 /*!
+\internal
     \class QFeedbackFileEffect
     \ingroup feedback
     \inmodule QtFeedback
@@ -652,12 +653,13 @@ QFeedbackEffect::State QFeedbackHapticsEffect::state() const
 void QFeedbackFileEffectPrivate::loadFinished(bool success)
 {
     loaded = success;
-    if( !success)
+    if (!success)
         backendUsed = -1;
 }
 
 
 /*!
+    \internal
     Constructs the QFeedbackFileEffect class, and passes \a parent to
     QObject's constructor.
 */
@@ -666,6 +668,7 @@ QFeedbackFileEffect::QFeedbackFileEffect(QObject *parent) : QFeedbackEffect(pare
 }
 
 /*!
+    \internal
     Stops the feedback and unloads the file if necessary.
 */
 QFeedbackFileEffect::~QFeedbackFileEffect()
@@ -682,6 +685,7 @@ int QFeedbackFileEffect::duration() const
 }
 
 /*!
+    \internal
     \property QFeedbackFileEffect::source
     \brief the url of the file that is loaded.
 
@@ -709,6 +713,7 @@ void QFeedbackFileEffect::setSource(const QUrl &source)
 }
 
 /*!
+    \internal
     \property QFeedbackFileEffect::loaded
     \brief reports if the file has been successfully loaded.
 */
@@ -731,6 +736,7 @@ void QFeedbackFileEffect::setLoaded(bool load)
 
 
 /*!
+    \internal
     \fn void QFeedbackFileEffect::load()
 
     Makes sure that the file associated with the feedback object is loaded.
@@ -743,6 +749,7 @@ void QFeedbackFileEffect::load()
 }
 
 /*!
+    \internal
     \fn void QFeedbackFileEffect::unload()
 
     makes sure that the file associated with the feedback object is unloaded.
@@ -756,6 +763,7 @@ void QFeedbackFileEffect::unload()
 
 
 /*!
+    \internal
     \fn QStringList QFeedbackFileEffect::supportedMimeTypes()
 
     returns the MIME types supported for playing effects from file.

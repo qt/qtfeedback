@@ -14,4 +14,4 @@ wince*|symbian {
     DEFINES += SRCDIR=\\\"$$PWD/\\\"
 }
 
-linux-*:CONFIG += insignificant_test    # QTBUG-22779, segfaults
+linux-*:system(". /etc/lsb-release && [ $DISTRIB_CODENAME = oneiric ]"):CONFIG += insignificant_test   # QTBUG-25448

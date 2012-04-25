@@ -67,7 +67,7 @@ private slots:
     void themeEffect();
 
 private:
-    QDeclarativeEngine engine;
+    QQmlEngine engine;
 };
 
 tst_qdeclarativefeedback::tst_qdeclarativefeedback()
@@ -76,7 +76,7 @@ tst_qdeclarativefeedback::tst_qdeclarativefeedback()
 
 void tst_qdeclarativefeedback::hapticsEffect()
 {
-    QDeclarativeComponent component(&engine);
+    QQmlComponent component(&engine);
     component.loadUrl(QUrl::fromLocalFile(SRCDIR "/data/hapticseffect.qml"));
 
     QObject *hapticsEffect = component.create();
@@ -143,7 +143,7 @@ void tst_qdeclarativefeedback::hapticsEffect()
 
 void tst_qdeclarativefeedback::fileEffect()
 {
-    QDeclarativeComponent component(&engine);
+    QQmlComponent component(&engine);
     component.loadUrl(QUrl::fromLocalFile(SRCDIR "/data/fileeffect.qml"));
 
     QObject *fileEffect = component.create();
@@ -167,7 +167,7 @@ void tst_qdeclarativefeedback::fileEffect()
 
 void tst_qdeclarativefeedback::actuator()
 {
-    QDeclarativeComponent component(&engine);
+    QQmlComponent component(&engine);
     component.loadUrl(QUrl::fromLocalFile(SRCDIR "/data/actuator.qml"));
 
     QObject *actuator = component.create();
@@ -179,7 +179,7 @@ void tst_qdeclarativefeedback::actuator()
 
 void tst_qdeclarativefeedback::themeEffect()
 {
-    QDeclarativeComponent component(&engine);
+    QQmlComponent component(&engine);
     component.loadUrl(QUrl::fromLocalFile(SRCDIR "/data/themeeffect.qml"));
 
     // We don't export this class, but we're just poking at properties anyway

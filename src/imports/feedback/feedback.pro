@@ -11,7 +11,7 @@ pluginTypes.files += $$PWD/plugins.qmltypes
 pluginTypes.path +=  $$[QT_INSTALL_IMPORTS]/$$TARGETPATH
 INSTALLS += qmldir pluginTypes
 
-QT += declarative feedback
+QT += qml feedback
 
 HEADERS += qdeclarativehapticseffect_p.h \
            qdeclarativefileeffect_p.h \
@@ -25,16 +25,3 @@ SOURCES += qdeclarativehapticseffect.cpp \
            qdeclarativethemeeffect.cpp \
            qdeclarativefeedbackactuator.cpp \
            qdeclarativefeedbackeffect.cpp
-
-symbian {
-    # In Symbian, a library should enjoy _largest_ possible capability set.
-    TARGET.CAPABILITY = ALL -TCB
-    # Allow writable DLL data
-    TARGET.EPOCALLOWDLLDATA = 1
-    # Target UID, makes every Symbian app unique
-    TARGET.UID3 = 0x200315FC
-    # Specifies what files shall be deployed: the plugin itself and the qmldir file.
-    importFiles.sources = $$DESTDIR/declarative_feedback$${QT_LIBINFIX}.dll qmldir
-    importFiles.path = $$QT_IMPORTS_BASE_DIR/$$TARGETPATH
-    DEPLOYMENT = importFiles
-}

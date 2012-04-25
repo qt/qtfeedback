@@ -221,8 +221,8 @@ QDeclarativeFeedbackActuator* QDeclarativeHapticsEffect::actuator() const
     This property is read only.
     \sa Actuator
 */
-QDeclarativeListProperty<QDeclarativeFeedbackActuator> QDeclarativeHapticsEffect::availableActuators() {
-    return QDeclarativeListProperty<QDeclarativeFeedbackActuator>(this,
+QQmlListProperty<QDeclarativeFeedbackActuator> QDeclarativeHapticsEffect::availableActuators() {
+    return QQmlListProperty<QDeclarativeFeedbackActuator>(this,
                                                                   0,
                                                                   0 /*appending actuators are not allowed*/,
                                                                   actuator_count,
@@ -230,11 +230,11 @@ QDeclarativeListProperty<QDeclarativeFeedbackActuator> QDeclarativeHapticsEffect
                                                                   0 /*removing actuators are not allowed*/);
 }
 
-int QDeclarativeHapticsEffect::actuator_count(QDeclarativeListProperty<QDeclarativeFeedbackActuator> *prop)
+int QDeclarativeHapticsEffect::actuator_count(QQmlListProperty<QDeclarativeFeedbackActuator> *prop)
 {
     return static_cast<QDeclarativeHapticsEffect*>(prop->object)->m_actuators.size();
 }
-QDeclarativeFeedbackActuator* QDeclarativeHapticsEffect::actuator_at(QDeclarativeListProperty<QDeclarativeFeedbackActuator> *prop, int index)
+QDeclarativeFeedbackActuator* QDeclarativeHapticsEffect::actuator_at(QQmlListProperty<QDeclarativeFeedbackActuator> *prop, int index)
 {
     return static_cast<QDeclarativeHapticsEffect*>(prop->object)->m_actuators.at(index);
 }

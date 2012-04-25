@@ -63,7 +63,7 @@ class QDeclarativeHapticsEffect : public QDeclarativeFeedbackEffect
 {
     Q_OBJECT
 
-    Q_PROPERTY(QDeclarativeListProperty<QDeclarativeFeedbackActuator> availableActuators READ availableActuators)
+    Q_PROPERTY(QQmlListProperty<QDeclarativeFeedbackActuator> availableActuators READ availableActuators)
     Q_PROPERTY(qreal intensity READ intensity WRITE setIntensity NOTIFY intensityChanged)
     Q_PROPERTY(int attackTime READ attackTime WRITE setAttackTime NOTIFY attackTimeChanged)
     Q_PROPERTY(qreal attackIntensity READ attackIntensity WRITE setAttackIntensity NOTIFY attackIntensityChanged)
@@ -92,9 +92,9 @@ public:
     int period() const;
     void setActuator(QDeclarativeFeedbackActuator *actuator);
     QDeclarativeFeedbackActuator* actuator() const;
-    QDeclarativeListProperty<QDeclarativeFeedbackActuator> availableActuators();
-    static int actuator_count(QDeclarativeListProperty<QDeclarativeFeedbackActuator> *prop);
-    static QDeclarativeFeedbackActuator *actuator_at(QDeclarativeListProperty<QDeclarativeFeedbackActuator> *prop, int index);
+    QQmlListProperty<QDeclarativeFeedbackActuator> availableActuators();
+    static int actuator_count(QQmlListProperty<QDeclarativeFeedbackActuator> *prop);
+    static QDeclarativeFeedbackActuator *actuator_at(QQmlListProperty<QDeclarativeFeedbackActuator> *prop, int index);
 
 signals:
     void intensityChanged();

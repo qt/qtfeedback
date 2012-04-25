@@ -49,7 +49,7 @@
 
 QT_USE_NAMESPACE
 
-static QObject *createDeclarativeThemeEfect(QDeclarativeEngine *engine, QJSEngine *jsengine)
+static QObject *createDeclarativeThemeEfect(QQmlEngine *engine, QJSEngine *jsengine)
 {
     Q_UNUSED(engine)
     Q_UNUSED(jsengine)
@@ -57,7 +57,7 @@ static QObject *createDeclarativeThemeEfect(QDeclarativeEngine *engine, QJSEngin
     return new QDeclarativeThemeEffect;
 }
 
-class QDeclarativeFeedbackPlugin : public QDeclarativeExtensionPlugin
+class QDeclarativeFeedbackPlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QQmlExtensionInterface" FILE "plugin.json")

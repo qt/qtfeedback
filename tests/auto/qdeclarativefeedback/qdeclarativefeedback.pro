@@ -1,6 +1,6 @@
 include(../auto.pri)
 
-QT += declarative feedback network script
+QT += qml feedback network script
 
 SOURCES += tst_qdeclarativefeedback.cpp
 

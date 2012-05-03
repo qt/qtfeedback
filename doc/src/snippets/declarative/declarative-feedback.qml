@@ -147,5 +147,49 @@ Rectangle {
             }
         }
 
-        //![Theme]
+    //![Theme]
+
+    //! [Play the system theme button click effect]
+        import QtFeedback.ThemeEffect 5.0 as Effect
+
+        Rectangle {
+            width: 180; height: 20
+            radius:5
+            color: "lightgrey"
+            Text {
+                anchors.centerIn: parent
+                text: "Play Theme: Press"
+            }
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    Effect.play(Effect.Press)
+                }
+            }
+        }
+    //! [Play the system theme button click effect]
+
+    //! [Start playing a custom haptic effect]
+    rumble.start();
+    //! [Start playing a custom haptic effect]
+
+    //! [Pause a custom haptic effect]
+    rumble.pause();
+    //! [Pause a custom haptic effect]
+
+    //! [Stop playing a custom haptic effect]
+    rumble.stop();
+    //! [Stop playing a custom haptic effect]
+
+    //! [Query the state of a custom haptic effect]
+    if (rumble.state === Feedback.Stopped)
+        console.log("The device has stopped rumbling.")
+    //! [Query the state of a custom haptic effect]
+
+    //! [Set the actuator which should play the custom effect]
+    for (var i = 0; rumble.availableActuators[i]; i++) {
+        if (rumble.availableActuators[i].name === "ExampleActuatorName") {
+           rumble.actuator = rumble.availableActuators[i]
+           }
     }
+    //! [Set the actuator which should play the custom effect]

@@ -191,7 +191,7 @@ void QDeclarativeFeedbackEffect::setState(QDeclarativeFeedbackEffect::State newS
   \li Feedback.DeviceBusy - The device resource is already being used.
   \endlist
 
-  \sa Feedback QFeedbackEffect::ErrorType
+  \sa Feedback, QFeedbackEffect::ErrorType
   */
 QDeclarativeFeedbackEffect::ErrorType QDeclarativeFeedbackEffect::error() const
 {

@@ -7,7 +7,7 @@ SUBDIRS += \
     qfeedbackmmk \
     qdeclarativefeedback \
 
-!contains(QT_CONFIG, declarative): SUBDIRS -= \
+!contains(QT_CONFIG, qml): SUBDIRS -= \
     qdeclarativefeedback \
 
 !contains(QT_CONFIG, multimedia): SUBDIRS -= \

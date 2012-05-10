@@ -79,7 +79,7 @@ QT_BEGIN_NAMESPACE
     actuator can have. You can also get a human readable name for the actuator with the
     name() function.
 
-    \sa QFeedbackHapticsEffect QFeedbackFileEffect QFeedbackEffect
+    \sa QFeedbackHapticsEffect, QFeedbackFileEffect, QFeedbackEffect
 */
 
 /*!

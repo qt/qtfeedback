@@ -120,9 +120,9 @@ QString QDeclarativeFeedbackActuator::name() const
     This property holds the state of the feedback actuator.
     This property is read only.
 */
-QFeedbackActuator::State QDeclarativeFeedbackActuator::state() const
+QDeclarativeFeedbackActuator::State QDeclarativeFeedbackActuator::state() const
 {
-    return d->state();
+    return static_cast<State>(d->state());
 }
 
 /*!
@@ -133,9 +133,9 @@ QFeedbackActuator::State QDeclarativeFeedbackActuator::state() const
     \li Period   - Value specifying that the device can play periodic effects.
     \endlist
 */
-bool QDeclarativeFeedbackActuator::isCapabilitySupported(QFeedbackActuator::Capability capbility) const
+bool QDeclarativeFeedbackActuator::isCapabilitySupported(Capability capability) const
 {
-    return d->isCapabilitySupported(capbility);
+    return d->isCapabilitySupported(static_cast<QFeedbackActuator::Capability>(capability));
 }
 /*!
     \qmlproperty bool Actuator::enabled

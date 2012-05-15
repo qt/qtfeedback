@@ -65,19 +65,33 @@ class QDeclarativeFeedbackActuator : public QObject
 
     Q_PROPERTY(int actuatorId READ actuatorId)
     Q_PROPERTY(QString name READ name)
-    Q_PROPERTY(QFeedbackActuator::State state READ state)
+    Q_PROPERTY(State state READ state)
     Q_PROPERTY(bool valid READ isValid)
     Q_PROPERTY(bool enabled READ isEnabled WRITE setEnabled NOTIFY enabledChanged)
 
+    Q_ENUMS(Capability)
+    Q_ENUMS(State)
+
 public:
+    enum Capability {
+        Envelope = QFeedbackActuator::Envelope,
+        Period = QFeedbackActuator::Period
+    };
+
+    enum State {
+        Busy = QFeedbackActuator::Busy,
+        Ready = QFeedbackActuator::Ready,
+        Unknown = QFeedbackActuator::Unknown
+    };
+
     explicit QDeclarativeFeedbackActuator(QObject *parent = 0);
     explicit QDeclarativeFeedbackActuator(QObject *parent, QFeedbackActuator* actuator);
     QFeedbackActuator* feedbackActuator() const;
     int actuatorId() const;
     bool isValid() const;
     QString name() const;
-    QFeedbackActuator::State state() const;
-    Q_INVOKABLE bool isCapabilitySupported(QFeedbackActuator::Capability capbility) const;
+    State state() const;
+    Q_INVOKABLE bool isCapabilitySupported(Capability capability) const;
     bool isEnabled() const;
     void setEnabled(bool v);
 

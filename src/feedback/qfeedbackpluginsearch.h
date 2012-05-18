@@ -3,7 +3,7 @@
 ** Copyright (C) 2012 Nokia Corporation and/or its subsidiary(-ies).
 ** Contact: http://www.qt-project.org/
 **
-** This file is part of the Qt Mobility Components.
+** This file is part of the QtFeedback Components.
 **
 ** $QT_BEGIN_LICENSE:LGPL$
 ** GNU Lesser General Public License Usage
@@ -38,63 +38,28 @@
 ** $QT_END_LICENSE$
 **
 ****************************************************************************/
-#ifndef QMOBILITYPLUGINSEARCH_H
-#define QMOBILITYPLUGINSEARCH_H
+#ifndef QFEEDBACKPLUGINSEARCH_H
+#define QFEEDBACKPLUGINSEARCH_H
 
 #include <QCoreApplication>
 #include <QStringList>
 #include <QDir>
 #include <QDebug>
 
-#if defined(Q_OS_SYMBIAN)
-# include <f32file.h>
-#endif
-
 QT_BEGIN_NAMESPACE
 
-#if defined(Q_OS_SYMBIAN)
-static inline bool qSymbian_CheckDir(const QDir& dir, RFs& rfs)
-{
-    bool pathFound = false;
-    // In Symbian, going cdUp() in a c:/private/<uid3>/ will result in *platsec* error at fileserver (requires AllFiles capability)
-    // Also, trying to cd() to a nonexistent directory causes *platsec* error. This does not cause functional harm, but should
-    // nevertheless be changed to use native Symbian methods to avoid unnecessary platsec warnings (as per qpluginloader.cpp).
-    // Use native Symbian code to check for directory existence, because checking
-    // for files from under non-existent protected dir like E:/private/<uid> using
-    // QDir::exists causes platform security violations on most apps.
-    QString nativePath = QDir::toNativeSeparators(dir.absolutePath());
-    TPtrC ptr = TPtrC16(static_cast<const TUint16*>(nativePath.utf16()), nativePath.length());
-    TUint attributes;
-    TInt err = rfs.Att(ptr, attributes);
-    if (err == KErrNone) {
-        // yes, the directory exists.
-        pathFound = true;
-    }
-    return pathFound;
-}
-#define CHECKDIR(dir) qSymbian_CheckDir(dir, rfs)
-#else
 #define CHECKDIR(dir) (dir).exists()
-#endif
 
-inline QStringList mobilityPlugins(const QString& plugintype)
+inline QStringList getPluginPaths(const QString& plugintype)
 {
 #if !defined QT_NO_DEBUG
     const bool showDebug = qgetenv("QT_DEBUG_PLUGINS").toInt() > 0;
 #endif
 
     QStringList paths = QCoreApplication::libraryPaths();
-/*#ifdef QTM_PLUGIN_PATH
-    paths << QLatin1String(QTM_PLUGIN_PATH);
-#endif*/
 #if !defined QT_NO_DEBUG
     if (showDebug)
         qDebug() << "Plugin paths:" << paths;
-#endif
-
-#if defined(Q_OS_SYMBIAN)
-    RFs rfs;
-    qt_symbian_throwIfError(rfs.Connect());
 #endif
 
     // Temp variable to avoid multiple identical paths
@@ -145,26 +110,7 @@ inline QStringList mobilityPlugins(const QString& plugintype)
         }
     }
 
-    /* Add application path + plugintype */
-    QDir appldir(QCoreApplication::applicationDirPath());
-    if(appldir.cd(plugintype)){
-        if (!processed.contains(appldir.absolutePath())){
-            processed.insert(appldir.absolutePath());
-            QStringList files = appldir.entryList(QDir::Files);
-#if !defined QT_NO_DEBUG
-            if (showDebug)
-                qDebug() << "Looking for " << plugintype << " plugins in" << appldir.path() << files;
-#endif
-            for (int j=0; j < files.count(); j++) {
-                plugins <<  appldir.absoluteFilePath(files.at(j));
-            }
-        }
-    }
-
-#if defined(Q_OS_SYMBIAN)
-    rfs.Close();
-#endif
-    return  plugins;
+  return  plugins;
 }
 
 QT_END_NAMESPACE

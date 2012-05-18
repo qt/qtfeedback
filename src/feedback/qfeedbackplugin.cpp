@@ -43,7 +43,7 @@
 #include "qfeedbackplugin_p.h"
 #include "qfeedbackeffect_p.h"
 
-#include "qmobilitypluginsearch.h"
+#include "qfeedbackpluginsearch.h"
 
 #include <QtCore/QCoreApplication>
 #include <QtCore/QStringList>
@@ -257,10 +257,8 @@ class BackendManager
 public:
     BackendManager()
     {
-        QStringList pluginPaths = mobilityPlugins(QLatin1String("feedback"));
-        // Testing hook to force "no plugin mode"
-        if (qApp->property("QFEEDBACK_TEST_NO_PLUGINS").isValid())
-            pluginPaths.clear();
+        QStringList pluginPaths = getPluginPaths(QLatin1String("feedback"));
+
         foreach (const QString& pluginPath, pluginPaths) {
             QPluginLoader loader(pluginPath);
 

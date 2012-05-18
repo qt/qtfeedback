@@ -3,7 +3,6 @@ SUBDIRS += \
     qfeedbackactuator \
     qfeedbackhapticseffect \
     qfeedbackplugin \
-    qfeedbacknoplugins \
     qfeedbackmmk \
     qdeclarativefeedback \
 

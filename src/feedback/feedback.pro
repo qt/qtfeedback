@@ -20,7 +20,8 @@ PUBLIC_HEADERS += qfeedbackglobal.h \
 PRIVATE_HEADERS += qfeedbackeffect_p.h \
                    qfeedbackplugin_p.h
 
-HEADERS = qtfeedbackversion.h $$PUBLIC_HEADERS $$PRIVATE_HEADERS
+HEADERS = qtfeedbackversion.h $$PUBLIC_HEADERS $$PRIVATE_HEADERS \
+    qfeedbackpluginsearch.h
 
 SOURCES += qfeedbackactuator.cpp \
            qfeedbackeffect.cpp \

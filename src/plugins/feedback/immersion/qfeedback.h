@@ -71,6 +71,7 @@ QT_USE_NAMESPACE
 class QFeedbackImmersion : public QObject, public QFeedbackHapticsInterface, public QFeedbackFileInterface
 {
     Q_OBJECT
+    Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QtFeedbackPlugin" FILE "immersion.json")
 
     Q_INTERFACES(QTM_NAMESPACE::QFeedbackHapticsInterface)
     Q_INTERFACES(QTM_NAMESPACE::QFeedbackFileInterface)

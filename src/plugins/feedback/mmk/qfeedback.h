@@ -56,6 +56,7 @@ class QFeedbackMediaObject;
 class QFeedbackMMK : public QObject, public QFeedbackFileInterface
 {
     Q_OBJECT
+    Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QtFeedbackPlugin" FILE mmk.json)
     Q_INTERFACES(QFeedbackFileInterface)
 
 public:

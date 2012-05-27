@@ -10,6 +10,4 @@ contains(meegotouchfeedback_enabled, yes) {
     SUBDIRS += meegotouch
 }
 
-symbian:SUBDIRS += symbian
-
 contains(QT_CONFIG, multimedia): SUBDIRS += mmk

@@ -48,6 +48,7 @@ QT_BEGIN_HEADER
 
 class QFeedbackMeegoTouch : public QObject, public QFeedbackThemeInterface {
     Q_OBJECT
+    Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QtFeedbackPlugin" FILE "meegotouch.json")
     Q_INTERFACES(QFeedbackThemeInterface)
 public:
     QFeedbackMeegoTouch(QObject *parent = 0);

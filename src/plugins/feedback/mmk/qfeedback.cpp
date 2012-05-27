@@ -48,8 +48,6 @@
 
 QT_BEGIN_NAMESPACE
 
-Q_EXPORT_PLUGIN2(feedback_mmk, QFeedbackMMK)
-
 QFeedbackMMK::QFeedbackMMK() : QObject(qApp)
 {
 }

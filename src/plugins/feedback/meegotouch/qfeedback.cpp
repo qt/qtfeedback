@@ -46,8 +46,6 @@
 
 #include <meegotouch/MFeedback>
 
-Q_EXPORT_PLUGIN2(feedback_meegotouch, QFeedbackMeegoTouch)
-
 // TODO Use a style property based enum to play the correct feedback
 //enum MeegoTouchFeedback
 //{

@@ -52,8 +52,6 @@
 
 #define MAX_FILE_SIZE (1 << 14) //16KB
 
-Q_EXPORT_PLUGIN2(feedback_immersion, QFeedbackImmersion)
-
 QFeedbackImmersion::QFeedbackImmersion() : QObject(qApp)
 {
     if (VIBE_FAILED(ImmVibeInitialize(VIBE_CURRENT_VERSION_NUMBER))) {

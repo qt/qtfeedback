@@ -49,7 +49,8 @@
 #include <QtCore/QVariant>
 #include <QDebug>
 
-        QFeedbackTestPlugin::QFeedbackTestPlugin() : QObject(qApp), mHapticState(QFeedbackEffect::Stopped), mFileState(QFeedbackEffect::Stopped)
+QFeedbackTestPlugin::QFeedbackTestPlugin()
+    : QObject(qApp), mHapticState(QFeedbackEffect::Stopped), mFileState(QFeedbackEffect::Stopped)
 {
     actuators_ << createFeedbackActuator(this, 0) << createFeedbackActuator(this, 1);
 }

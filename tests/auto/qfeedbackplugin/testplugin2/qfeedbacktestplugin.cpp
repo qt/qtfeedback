@@ -49,8 +49,6 @@
 #include <QtCore/QVariant>
 #include <QDebug>
 
-Q_EXPORT_PLUGIN2(feedback_atestplugin, QFeedbackTestPlugin)
-
 QFeedbackTestPlugin::QFeedbackTestPlugin()
     : QObject(qApp)
 {

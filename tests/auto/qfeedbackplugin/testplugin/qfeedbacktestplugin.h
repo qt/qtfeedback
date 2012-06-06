@@ -58,6 +58,7 @@ QT_USE_NAMESPACE
 class QFeedbackTestPlugin : public QObject, public QFeedbackHapticsInterface, public QFeedbackFileInterface, public QFeedbackThemeInterface
 {
     Q_OBJECT
+    Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QtFeedbackTestPlugin")
     Q_INTERFACES(QFeedbackHapticsInterface)
     Q_INTERFACES(QFeedbackFileInterface)
     Q_INTERFACES(QFeedbackThemeInterface)

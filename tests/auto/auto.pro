@@ -5,6 +5,7 @@ SUBDIRS += \
     qfeedbackplugin \
     qfeedbackmmk \
     qdeclarativefeedback \
+    cmake
 
 !contains(QT_CONFIG, qml): SUBDIRS -= \
     qdeclarativefeedback \

@@ -41,7 +41,7 @@
 
 #include "qdeclarativethemeeffect_p.h"
 /*!
-    \qmlclass ThemeEffect
+    \qmltype ThemeEffect
     \brief The ThemeEffect element represents a themed feedback effect.
     \ingroup qml-feedback-api
 

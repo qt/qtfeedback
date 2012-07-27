@@ -41,7 +41,7 @@
 
 #include "qdeclarativehapticseffect_p.h"
 /*!
-    \qmlclass HapticsEffect
+    \qmltype HapticsEffect
     \brief The HapticsEffect element represents a custom haptic feedback effect.
     \ingroup qml-feedback-api
     \inherits FeedbackEffect

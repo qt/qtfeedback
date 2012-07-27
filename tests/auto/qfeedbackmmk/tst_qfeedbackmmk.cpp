@@ -168,6 +168,9 @@ void tst_QFeedbackMMK::goodFile()
 
     // now load again
     fe.load();
+#ifdef Q_OS_MAC
+    QEXPECT_FAIL("", "QTBUG-25448", Abort);
+#endif
     QTRY_COMPARE((int)fe.state(),  (int)QFeedbackFileEffect::Loading);
     QCOMPARE(errorSpy.count(), 1);
     QCOMPARE(stateSpy.count(), 8); // Stopped to Loading

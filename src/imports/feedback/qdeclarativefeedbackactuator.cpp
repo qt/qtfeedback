@@ -42,7 +42,8 @@
 #include "qdeclarativefeedbackactuator_p.h"
 
 /*!
-    \qmlclass Actuator QFeedbackActuator
+    \qmltype Actuator
+    \instantiates QFeedbackActuator
     \brief The Actuator element represents a feedback actuator.
     \ingroup qml-feedback-api
 

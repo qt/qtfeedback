@@ -42,7 +42,7 @@
 #include "qdeclarativefileeffect_p.h"
 /*!
     \internal
-    \qmlclass FileEffect
+    \qmltype FileEffect
     \brief The FileEffect element represents feedback data stored in a file.
     \ingroup qml-feedback-api
     \inherits FeedbackEffect

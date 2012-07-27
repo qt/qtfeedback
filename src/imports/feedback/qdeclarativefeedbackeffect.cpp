@@ -42,7 +42,8 @@
 #include "qdeclarativefeedbackeffect_p.h"
 
 /*!
-    \qmlclass FeedbackEffect QDeclarativeFeedbackEffect
+    \qmltype FeedbackEffect
+    \instantiates QDeclarativeFeedbackEffect
     \brief The FeedbackEffect element is the base class for all feedback effects.
     \ingroup qml-feedback-api
 

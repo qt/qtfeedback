@@ -1,6 +1,6 @@
 include(../auto.pri)
 
-QT += feedback
+QT += feedback multimedia
 
 SOURCES += tst_qfeedbackmmk.cpp
 

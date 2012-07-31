@@ -46,6 +46,7 @@
 #include <qfeedbackeffect.h>
 #include <qfeedbackactuator.h>
 #include <QSignalSpy>
+#include <QSoundEffect>
 
 class tst_QFeedbackMMK : public QObject
 {
@@ -78,6 +79,11 @@ tst_QFeedbackMMK::~tst_QFeedbackMMK()
 
 void tst_QFeedbackMMK::initTestCase()
 {
+    // Only perform tests if audio device exists
+    QStringList mimeTypes = QSoundEffect::supportedMimeTypes();
+    if (mimeTypes.empty())
+        QSKIP("No audio devices available");
+
     // Some of this comes from the qsoundeffect testcase . .. ...
 #ifdef QT_QFEEDBACKMMK_USEAPPLICATIONPATH
     url = QUrl::fromLocalFile(QCoreApplication::applicationDirPath() + QString("/test.wav"));

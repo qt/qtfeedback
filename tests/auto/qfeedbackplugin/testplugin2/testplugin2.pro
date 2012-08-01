@@ -30,3 +30,4 @@ symbian: {
 
 target.path += $$[QT_INSTALL_PLUGINS]/feedback
 INSTALLS += target
+DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0

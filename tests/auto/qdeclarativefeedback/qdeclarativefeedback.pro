@@ -19,3 +19,4 @@ OTHER_FILES += \
     data/themeeffect.qml \
     data/themeeffect2.qml \
     data/themeeffect3.qml
+DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0

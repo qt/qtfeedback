@@ -27,7 +27,7 @@
 
 /*!
 
-\page index.html
+\page qtfeedback-index.html
 \title C++ Feedback API
 
 \brief An API enabling a client to provide tactile and audio feedback to user actions.

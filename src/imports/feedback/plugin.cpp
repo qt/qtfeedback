@@ -75,7 +75,7 @@ public:
         qmlRegisterType<QDeclarativeFileEffect>(uri, major, minor, "FileEffect");
         qmlRegisterType<QDeclarativeHapticsEffect>(uri, major, minor, "HapticsEffect");
         qmlRegisterType<QDeclarativeThemeEffect>(uri, major, minor, "ThemeEffect");
-        qmlRegisterModuleApi<QDeclarativeThemeEffect>("QtFeedback.ThemeEffect", major, minor, createDeclarativeThemeEfect);
+        qmlRegisterSingletonType<QDeclarativeThemeEffect>("QtFeedback", major, minor, "EffectPlayer", createDeclarativeThemeEfect);
     }
 };
 

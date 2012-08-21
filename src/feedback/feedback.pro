@@ -5,6 +5,8 @@ QT = core
 
 load(qt_module)
 
+QMAKE_DOCS = $$PWD/../../doc/qt5.qdocconf
+
 PUBLIC_HEADERS += qfeedbackglobal.h \
                   qfeedbackactuator.h \
                   qfeedbackeffect.h \

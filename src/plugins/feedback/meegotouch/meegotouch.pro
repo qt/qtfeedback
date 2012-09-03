@@ -1,5 +1,3 @@
-load(qt_build_config)
-
 TARGET = qtfeedback_meegotouch
 QT = core feedback
 

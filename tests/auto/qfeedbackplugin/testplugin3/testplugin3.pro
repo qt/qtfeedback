@@ -1,5 +1,3 @@
-load(qt_build_config)
-
 TARGET = qtfeedback_testplugin3
 QT = core feedback
 

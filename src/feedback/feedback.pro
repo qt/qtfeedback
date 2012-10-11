@@ -1,9 +1,9 @@
 TARGET = QtFeedback
 QT = core
 
-load(qt_module)
-
 QMAKE_DOCS = $$PWD/../../doc/qt5.qdocconf
+
+load(qt_module)
 
 PUBLIC_HEADERS += qfeedbackglobal.h \
                   qfeedbackactuator.h \

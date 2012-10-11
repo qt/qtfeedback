@@ -1,3 +1,6 @@
+include($QT_INSTALL_DOCS/global/qt-html-templates-offline.qdocconf)
+include($QT_INSTALL_DOCS/global/qt-module-defaults.qdocconf)
+
 # Name of the project.
 project = projectname
 
@@ -56,7 +59,6 @@ qhp.projectname.subprojects.classes.sortPages = true
 
 # Do NOT change the variables after this line unless you know what you are doing.
 
-outputdir = html
 outputformats = HTML
 
 examples.fileextensions = "*.cpp *.h *.js *.svg *.xml *.ui *.qml"

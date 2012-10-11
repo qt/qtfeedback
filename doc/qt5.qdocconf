@@ -2,7 +2,7 @@ include($QT_INSTALL_DOCS/global/qt-html-templates-offline.qdocconf)
 include($QT_INSTALL_DOCS/global/qt-module-defaults.qdocconf)
 
 # Name of the project.
-project = projectname
+project = qtfeedback
 
 include(macros.qdocconf)
 include(compat.qdocconf)
@@ -25,35 +25,35 @@ sourcedirs += ..
 # Qt Assistant and/or Qt Creator.
 
 # Defines the name of the project. You cannot use operators (+, =, -) in
-# the name. Properties for this project are set using a qhp.<projectname>.property
+# the name. Properties for this project are set using a qhp.<qtfeedback>.property
 # format.
-qhp.projects = projectname
+qhp.projects = qtfeedback
 
 # Sets the name of the output qhp file.
-qhp.projectname.file = projectname.qhp
+qhp.qtfeedback.file = qtfeedback.qhp
 
 # Namespace for the output file. This namespace is used to distinguish between
 # different documentation files in Creator/Assistant. Normal format for MP
-# projects should be: com.nokia.mp.<projectname>.version with version being
+# projects should be: com.nokia.mp.<qtfeedback>.version with version being
 # a number containing a major, minor and revision element. E.g. version 1.0
 # becomes 100.
-qhp.projectname.namespace = com.nokia.mp.projectname.100
+qhp.qtfeedback.namespace = com.nokia.mp.qtfeedback.100
 
 # Title for the package, will be the main title for the package in
 # Assistant/Creator.
-qhp.projectname.indexTitle = Projectname Documentation
+qhp.qtfeedback.indexTitle = Qt Feedback Documentation
 
 # Extra files to add to the output which are not linked to from anywhere
 # using a qdoc \l command.
-qhp.projectname.extraFiles = style/style.css \
+qhp.qtfeedback.extraFiles = style/style.css \
                                      index.html
 
 # Only updtae the name of the project for the next variables.
-qhp.projectname.virtualFolder  = qdoc
-qhp.projectname.subprojects = classes
-qhp.projectname.subprojects.classes.title = Classes
-qhp.projectname.subprojects.classes.selectors = class fake:headerfile
-qhp.projectname.subprojects.classes.sortPages = true
+qhp.qtfeedback.virtualFolder  = qdoc
+qhp.qtfeedback.subprojects = classes
+qhp.qtfeedback.subprojects.classes.title = Classes
+qhp.qtfeedback.subprojects.classes.selectors = class fake:headerfile
+qhp.qtfeedback.subprojects.classes.sortPages = true
 
 
 

@@ -1,4 +1,4 @@
-QT += qml feedback
+QT = core qml feedback
 
 HEADERS += qdeclarativehapticseffect_p.h \
            qdeclarativefileeffect_p.h \

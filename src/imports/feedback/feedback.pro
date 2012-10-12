@@ -1,4 +1,5 @@
 QT += qml feedback
+QT -= gui
 
 HEADERS += qdeclarativehapticseffect_p.h \
            qdeclarativefileeffect_p.h \

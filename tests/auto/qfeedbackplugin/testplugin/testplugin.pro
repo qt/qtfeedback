@@ -5,8 +5,6 @@ load(qt_plugin)
 
 DESTDIR = $$QT.feedback.plugins/feedback
 
-INCLUDEPATH += $$QT.feedback.includes
-
 HEADERS += qfeedbacktestplugin.h
 SOURCES += qfeedbacktestplugin.cpp
 

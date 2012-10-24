@@ -1,9 +1,8 @@
 TARGET = qtfeedback_mmk
 QT = core feedback multimedia
 
+PLUGIN_TYPE = feedback
 load(qt_plugin)
-
-DESTDIR = $$QT.feedback.plugins/feedback
 
 HEADERS += qfeedback.h
 SOURCES += qfeedback.cpp
@@ -24,6 +23,3 @@ symbian: {
     symbianplugin.path = $${QT_PLUGINS_BASE_DIR}/$${PLUGIN_TYPE}
     DEPLOYMENT += symbianplugin
 }
-
-target.path += $$[QT_INSTALL_PLUGINS]/feedback
-INSTALLS += target

@@ -1,9 +1,8 @@
 TARGET = qtfeedback_testplugin2
 QT = core feedback
 
+PLUGIN_TYPE = feedback
 load(qt_plugin)
-
-DESTDIR = $$QT.feedback.plugins/feedback
 
 INCLUDEPATH += $$QT.feedback.includes
 
@@ -26,6 +25,4 @@ symbian: {
     DEPLOYMENT += symbianplugin
 }
 
-target.path += $$[QT_INSTALL_PLUGINS]/feedback
-INSTALLS += target
 DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0

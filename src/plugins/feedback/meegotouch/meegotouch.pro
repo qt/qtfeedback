@@ -1,14 +1,10 @@
 TARGET = qtfeedback_meegotouch
 QT = core feedback
 
+PLUGIN_TYPE = feedback
 load(qt_plugin)
-
-DESTDIR = $$QT.feedback.plugins/feedback
 
 HEADERS += qfeedback.h
 SOURCES += qfeedback.cpp
 
 LIBS += -lmeegotouchcore
-
-target.path += $$[QT_INSTALL_PLUGINS]/feedback
-INSTALLS += target

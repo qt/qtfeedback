@@ -4,8 +4,6 @@ QT = core feedback
 PLUGIN_TYPE = feedback
 load(qt_plugin)
 
-INCLUDEPATH += $$QT.feedback.includes
-
 HEADERS += qfeedbacktestplugin.h
 SOURCES += qfeedbacktestplugin.cpp
 

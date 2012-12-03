@@ -14,8 +14,3 @@ CONFIG += mobility
 MOBILITY = feedback
 
 SOURCES += qtfeedbackdocsample.cpp
-
-symbian {
-    TARGET.EPOCALLOWDLLDATA = 1
-    MMP_RULES+="EXPORTUNFROZEN"
-}

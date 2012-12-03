@@ -4,7 +4,7 @@ QT += feedback
 
 SOURCES += tst_qfeedbackmmk.cpp
 
-wince*|symbian {
+wince* {
     deploy.files = test.wav
     DEPLOYMENT = deploy
     DEFINES += QT_QFEEDBACKMMK_USEAPPLICATIONPATH

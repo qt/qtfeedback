@@ -15,7 +15,3 @@ FORMS += hapticsplayer.ui
 CONFIG = feedback
 
 include(../examples.pri)
-
-symbian: {
-    TARGET.CAPABILITY = WriteDeviceData ReadDeviceData
-}

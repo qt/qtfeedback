@@ -4,13 +4,7 @@ QT += qml feedback network
 
 SOURCES += tst_qdeclarativefeedback.cpp
 
-symbian: {
-    importFiles.sources = data
-    importFiles.path = .
-    DEPLOYMENT += importFiles
-} else {
-    DEFINES += SRCDIR=\\\"$$PWD\\\"
-}
+DEFINES += SRCDIR=\\\"$$PWD\\\"
 
 OTHER_FILES += \
     data/hapticseffect.qml \

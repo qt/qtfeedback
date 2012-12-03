@@ -1,7 +1,7 @@
 TARGET = QtFeedback
 QT = core
 
-QMAKE_DOCS = $$PWD/../../doc/qt5.qdocconf
+QMAKE_DOCS = $$PWD/../../doc/qtfeedback.qdocconf
 
 load(qt_module)
 

@@ -15,8 +15,4 @@ SOURCES += hapticsquare.cpp main.cpp \
 
 CONFIG = feedback
 
-symbian: {
-     TARGET.CAPABILITY = WriteDeviceData ReadDeviceData
-}
-
 include(../examples.pri)

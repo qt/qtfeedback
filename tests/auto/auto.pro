@@ -7,9 +7,9 @@ SUBDIRS += \
     qdeclarativefeedback \
     cmake
 
-!contains(QT_CONFIG, qml): SUBDIRS -= \
+!qtHaveModule(qml): SUBDIRS -= \
     qdeclarativefeedback \
 
-!contains(QT_CONFIG, multimedia): SUBDIRS -= \
+!qtHaveModule(multimedia): SUBDIRS -= \
     qfeedbackmmk \
 

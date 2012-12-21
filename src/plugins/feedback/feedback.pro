@@ -10,4 +10,4 @@ contains(meegotouchfeedback_enabled, yes) {
     SUBDIRS += meegotouch
 }
 
-contains(QT_CONFIG, multimedia): SUBDIRS += mmk
+qtHaveModule(multimedia): SUBDIRS += mmk

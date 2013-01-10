@@ -91,7 +91,7 @@ public:
     static QList<QFeedbackActuator*> actuators();
     bool operator==(const QFeedbackActuator&) const;
 
-signals:
+Q_SIGNALS:
     void enabledChanged();
 
 private:

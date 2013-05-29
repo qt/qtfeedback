@@ -2,27 +2,46 @@ import QtQuick.tooling 1.1
 
 // This file describes the plugin-supplied types contained in the library.
 // It is used for QML tooling purposes only.
+//
+// This file was auto-generated with the command 'qmlplugindump -notrelocatable QtFeedback 5.0'.
 
 Module {
     Component {
         name: "QDeclarativeFeedbackActuator"
         prototype: "QObject"
         exports: ["QtFeedback/Actuator 5.0"]
+        exportMetaObjectRevisions: [0]
+        Enum {
+            name: "Capability"
+            values: {
+                "Envelope": 0,
+                "Period": 1
+            }
+        }
+        Enum {
+            name: "State"
+            values: {
+                "Busy": 0,
+                "Ready": 1,
+                "Unknown": 2
+            }
+        }
         Property { name: "actuatorId"; type: "int"; isReadonly: true }
         Property { name: "name"; type: "string"; isReadonly: true }
-        Property { name: "state"; type: "QFeedbackActuator::State"; isReadonly: true }
+        Property { name: "state"; type: "State"; isReadonly: true }
         Property { name: "valid"; type: "bool"; isReadonly: true }
         Property { name: "enabled"; type: "bool" }
         Method {
             name: "isCapabilitySupported"
             type: "bool"
-            Parameter { name: "capbility"; type: "QFeedbackActuator::Capability" }
+            Parameter { name: "capability"; type: "Capability" }
         }
     }
     Component {
         name: "QDeclarativeFeedbackEffect"
         prototype: "QObject"
         exports: ["QtFeedback/Feedback 5.0", "QtFeedback/FeedbackEffect 5.0"]
+        exportMetaObjectRevisions: [0, 0]
         Enum {
             name: "Duration"
             values: {
@@ -59,6 +78,7 @@ Module {
         name: "QDeclarativeFileEffect"
         prototype: "QDeclarativeFeedbackEffect"
         exports: ["QtFeedback/FileEffect 5.0"]
+        exportMetaObjectRevisions: [0]
         Property { name: "loaded"; type: "bool" }
         Property { name: "source"; type: "QUrl" }
         Property { name: "supportedMimeTypes"; type: "QStringList"; isReadonly: true }
@@ -69,24 +89,26 @@ Module {
         name: "QDeclarativeHapticsEffect"
         prototype: "QDeclarativeFeedbackEffect"
         exports: ["QtFeedback/HapticsEffect 5.0"]
+        exportMetaObjectRevisions: [0]
         Property {
             name: "availableActuators"
             type: "QDeclarativeFeedbackActuator"
             isList: true
             isReadonly: true
         }
-        Property { name: "intensity"; type: "qreal" }
+        Property { name: "intensity"; type: "double" }
         Property { name: "attackTime"; type: "int" }
-        Property { name: "attackIntensity"; type: "qreal" }
+        Property { name: "attackIntensity"; type: "double" }
         Property { name: "fadeTime"; type: "int" }
-        Property { name: "fadeIntensity"; type: "qreal" }
+        Property { name: "fadeIntensity"; type: "double" }
         Property { name: "period"; type: "int" }
         Property { name: "actuator"; type: "QDeclarativeFeedbackActuator"; isPointer: true }
     }
     Component {
         name: "QDeclarativeThemeEffect"
         prototype: "QObject"
-        exports: ["QtFeedback/ThemeEffect 5.0"]
+        exports: ["QtFeedback/EffectPlayer 5.0", "QtFeedback/ThemeEffect 5.0"]
+        exportMetaObjectRevisions: [0, 0]
         Enum {
             name: "Effect"
             values: {
@@ -116,5 +138,4 @@ Module {
             Parameter { name: "effect"; type: "Effect" }
         }
     }
-    ModuleApi { uri: "QtFeedback.ThemeEffect"; version: 5.0; name: "QDeclarativeThemeEffect" }
 }

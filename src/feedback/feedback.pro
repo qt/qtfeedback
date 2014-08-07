@@ -3,6 +3,9 @@ QT = core
 
 QMAKE_DOCS = $$PWD/../../doc/qtfeedback.qdocconf
 
+MODULE_PLUGIN_TYPES = \
+    feedback
+
 load(qt_module)
 
 PUBLIC_HEADERS += qfeedbackglobal.h \

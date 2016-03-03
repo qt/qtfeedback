@@ -86,7 +86,7 @@ public:
         DeviceBusy
     };
 
-    explicit QFeedbackEffect(QObject *parent = 0);
+    explicit QFeedbackEffect(QObject *parent = Q_NULLPTR);
 
     virtual State state() const = 0;
     virtual int duration() const = 0;
@@ -125,7 +125,7 @@ class Q_FEEDBACK_EXPORT QFeedbackHapticsEffect : public QFeedbackEffect
     Q_PROPERTY(QFeedbackActuator* actuator READ actuator WRITE setActuator)
 
 public:
-    explicit QFeedbackHapticsEffect(QObject *parent = 0);
+    explicit QFeedbackHapticsEffect(QObject *parent = Q_NULLPTR);
     ~QFeedbackHapticsEffect();
 
     void setDuration(int msecs);
@@ -173,7 +173,7 @@ class Q_FEEDBACK_EXPORT QFeedbackFileEffect : public QFeedbackEffect
     Q_PROPERTY(QUrl source READ source WRITE setSource)
 
 public:
-    explicit QFeedbackFileEffect(QObject *parent = 0);
+    explicit QFeedbackFileEffect(QObject *parent = Q_NULLPTR);
     ~QFeedbackFileEffect();
 
     int duration() const;

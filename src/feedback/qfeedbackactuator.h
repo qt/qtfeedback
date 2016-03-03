@@ -70,7 +70,7 @@ public:
         Unknown
     };
 
-    QFeedbackActuator(QObject *parent = Q_NULLPTR);
+    explicit QFeedbackActuator(QObject *parent = Q_NULLPTR);
 
     int id() const;
     bool isValid() const;

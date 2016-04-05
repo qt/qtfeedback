@@ -74,9 +74,6 @@ private Q_SLOTS:
     void browseClicked();
     void filePlayPauseClicked();
 
-#ifdef Q_OS_SYMBIAN
-    void tabChanged(int index);
-#endif
 protected:
     void timerEvent(QTimerEvent *);
 

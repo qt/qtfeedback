@@ -87,10 +87,6 @@ void tst_QFeedbackMMK::cleanupTestCase()
 
 void tst_QFeedbackMMK::init()
 {
-#ifdef Q_OS_SYMBIAN
-    //we need that head start for the eventloop to be responsive
-    QTest::qWait(1000);
-#endif
 }
 
 void tst_QFeedbackMMK::cleanup()

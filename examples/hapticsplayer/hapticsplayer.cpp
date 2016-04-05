@@ -114,14 +114,6 @@ HapticsPlayer::HapticsPlayer() : actuator(0)
 
     ui.tabWidget->setTabEnabled(1, QFeedbackEffect::supportsThemeEffect());
     ui.tabWidget->setTabEnabled(2, !QFeedbackFileEffect::supportedMimeTypes().isEmpty());
-#ifdef Q_OS_SYMBIAN
-    // Due to focus handling problems when using tabwidget in Qt/s60 with old non-touch-screen devices
-    // we have to handle focus explicitly here, this might get fixed at some point
-    connect(ui.tabWidget,SIGNAL(currentChanged(int)),this,SLOT(tabChanged(int)));
-    // force initial focus to a button on the first tab
-    ui.tabWidget->setCurrentIndex(0);
-    ui.playPause->setFocus();
-#endif
     //that is a hackish way of updating the info concerning the effects
     startTimer(50);
 }
@@ -148,23 +140,6 @@ void HapticsPlayer::actuatorChanged()
     }
 }
 
-#ifdef Q_OS_SYMBIAN
-void HapticsPlayer::tabChanged(int index)
-{
-    switch (index) {
-        case 0:
-           ui.playPause->setFocus();
-           break;
-        case 1:
-           ui.instantPlay->setFocus();
-           break;
-        case 2:
-           ui.browse->setFocus();
-           break;
-    }
-}
-#endif
-
 void HapticsPlayer::enabledChanged(bool on)
 {
     if (!on)
@@ -189,9 +164,6 @@ void HapticsPlayer::enabledChanged(bool on)
             ui.grpPeriod->hide();
         }
     }
-#ifdef Q_OS_SYMBIAN
-    ui.playPause->setFocus();
-#endif
 }
 
 void HapticsPlayer::playPauseClicked()

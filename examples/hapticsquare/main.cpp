@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     a.addLibraryPath("../../plugins"); // allows the plugins to be loaded
     HapticSquare w;
-#if defined Q_OS_SYMBIAN || defined (Q_OS_WINCE)
+#if defined (Q_OS_WINCE)
     w.setWindowState(Qt::WindowMaximized);
 #endif
     w.show();

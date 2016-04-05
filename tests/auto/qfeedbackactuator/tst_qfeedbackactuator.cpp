@@ -79,7 +79,7 @@ void tst_QFeedbackActuator::cleanup()
 }
 
 
-#if defined(HAVE_ACTUATORS) && !defined(Q_OS_SYMBIAN)
+#if defined(HAVE_ACTUATORS)
 //we're on meego/maemo
 #define CAPABILITY true //the capabilities are supported through Immersion
 #else

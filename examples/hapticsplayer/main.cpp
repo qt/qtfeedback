@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
 
     HapticsPlayer w;
 
-#if defined Q_OS_SYMBIAN || defined (Q_OS_WINCE)
+#if defined(Q_OS_WINCE)
     w.showMaximized();
 #endif
     w.show();

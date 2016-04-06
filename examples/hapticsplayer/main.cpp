@@ -48,9 +48,6 @@ int main(int argc, char *argv[])
 
     HapticsPlayer w;
 
-#if defined(Q_OS_WINCE)
-    w.showMaximized();
-#endif
     w.show();
 
 

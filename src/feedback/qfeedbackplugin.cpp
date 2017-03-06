@@ -120,13 +120,18 @@ class BackendLoader
 {
 public:
     BackendLoader() : inst(0) { }
-    ~BackendLoader() { pl.unload(); }
+    ~BackendLoader() {
+#if QT_CONFIG(library)
+        pl.unload();
+#endif
+    }
 
     void setInstance(T *newInst) { inst = newInst; }
     T * instance() { return inst; }
 
     void tryLoad(QPluginLoader &loader)
     {
+#if QT_CONFIG(library)
         if (T *newInst = qobject_cast<T*>(loader.instance())) {
             if (!inst || inst->pluginPriority() < newInst->pluginPriority()) {
                 inst = newInst;
@@ -135,6 +140,9 @@ public:
                 pl.load(); //Adds a ref to the library
             }
         }
+#else
+        Q_UNUSED(loader)
+#endif
     }
 
 
@@ -252,6 +260,7 @@ class BackendManager
 public:
     BackendManager()
     {
+#if QT_CONFIG(library)
         QStringList pluginPaths = getPluginPaths(QLatin1String("feedback"));
 
         foreach (const QString& pluginPath, pluginPaths) {
@@ -266,6 +275,7 @@ public:
                 loader.unload();
             }
         }
+#endif
 
         if (!hapticsBackend.instance())
             hapticsBackend.setInstance(new QDummyBackend);

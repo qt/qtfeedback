@@ -10,4 +10,7 @@ contains(meegotouchfeedback_enabled, yes) {
     SUBDIRS += meegotouch
 }
 
-qtHaveModule(multimedia): SUBDIRS += mmk
+qtHaveModule(multimedia):!contains(multimedia_disabled, yes) {
+    message("Building with multimedia support")
+    SUBDIRS += mmk
+}

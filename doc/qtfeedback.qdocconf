@@ -15,7 +15,7 @@ include(qt-defines.qdocconf)
 # Images should be placed in <rootdir>/dic/images and examples in
 # <rootdir>/examples.
 # Paths are relative to the  location of this file.
-exampledirs += src/snippets ..
+exampledirs += src/snippets .. ../examples
 headerdirs += ..
 imagedirs += src/images
 sourcedirs += ..
@@ -41,17 +41,22 @@ qhp.qtfeedback.namespace = com.nokia.mp.qtfeedback.100
 
 # Title for the package, will be the main title for the package in
 # Assistant/Creator.
-qhp.qtfeedback.indexTitle = Qt Feedback Documentation
+qhp.qtfeedback.indexTitle = Qt Feedback
 
 # Extra files to add to the output which are not linked to from anywhere
 # using a qdoc \l command.
 qhp.qtfeedback.extraFiles = style/style.css \
-                                     index.html
+                            qtfeedback-index.html
 
 # Only updtae the name of the project for the next variables.
 qhp.qtfeedback.virtualFolder  = qdoc
-qhp.qtfeedback.subprojects = classes
-qhp.qtfeedback.subprojects.classes.title = Classes
+qhp.qtfeedback.subprojects = qmltypes classes
+qhp.qtfeedback.subprojects.qmltypes.title = QML Types
+qhp.qtfeedback.subprojects.qmltypes.indexTitle = Qt Feedback QML Types
+qhp.qtfeedback.subprojects.qmltypes.selectors = qmlclass
+qhp.qtfeedback.subprojects.qmltypes.sortPages = true
+qhp.qtfeedback.subprojects.classes.title = C++ Classes
+qhp.qtfeedback.subprojects.classes.indexTitle = Qt Feedback C++ Classes
 qhp.qtfeedback.subprojects.classes.selectors = class fake:headerfile
 qhp.qtfeedback.subprojects.classes.sortPages = true
 

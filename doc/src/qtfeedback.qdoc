@@ -28,7 +28,7 @@
 /*!
 
 \page qtfeedback-index.html
-\title C++ Feedback API
+\title Qt Feedback
 
 \brief An API enabling a client to provide tactile and audio feedback to user actions.
 
@@ -197,3 +197,21 @@ application.
 
 */
 
+/*!
+    \page feedback-api.html
+
+    \title Qt Feedback C++ Classes
+
+    \brief An API enabling a client to provide tactile and audio feedback to user actions.
+
+    \section1 Overview
+
+    The C++ Feedback API enables a client to control and provide tactile and audio feedback
+    to the user. The feedback is in response to user actions. For example, touching an
+    onscreen button. Control of the feedback involves control of the vibration of
+    the device, when a vibrator is used, or the piezo feedback from the screen.
+
+    \section1 Feedback C++ Classes
+
+    \annotatedlist feedback
+*/

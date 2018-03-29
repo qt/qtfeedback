@@ -36,7 +36,7 @@
 /*!
     \page qml-feedback-api.html
 
-    \title QML Feedback API
+    \title Qt Feedback QML Types
 
     \brief A QML plugin for the QtFeedback API.
 
